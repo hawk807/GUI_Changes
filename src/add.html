@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/add.css">
+</head>
+
+<body>
+    <p class="notify">Bot Configuration</p>
+
+    <div class="row2">
+        <h3></h3>
+        </legend>
+        <div class="personal-details">
+            <div>
+                <div><label>Target</label><input type="text" name="name" placeholder="TRADE" id="tokenA" required></div>
+                <div><label>Pair</label><input type="text" name="name" placeholder="WBNB, WETH, BUSD..." id="tokenB"
+                        required></div>
+                <div><label>Slippage</label><input type="text" name="name" placeholder="30%" id="slippage" required>
+                </div>
+
+                <div>
+                    <label>Blacklist-Check</label>
+                    <select onchange="val()" id="select_id">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+                <button id="updateBtn">Update</button>
+            </div>
+
+            <a id="closeBtn">Close Window</a><br>
+
+        </div>
+        <script src="add.js"></script>
+</body>
+
+</html>
