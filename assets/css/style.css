@@ -9,6 +9,19 @@ body{
 	background: linear-gradient(to right, #0f0f3a 0%, #27134d 51%, #2f0d31 100%)
 }
 
+.card-body{
+	background-color: rgb(24, 11, 59) !important;
+}
+
+.card-header {
+	background-color:#ffffff !important;
+}
+
+.pdlr10{
+	background: #3D2F8D;
+	padding: 10px 10px;
+}
+
 .container{
 	max-width: 1100px;
 	margin: 0 auto;
@@ -98,10 +111,7 @@ body{
 
 
 }
-.pdlr10{
-	background: #3b1e83;
-	padding: 10px 10px;
-}
+
 
 .left_1,.right_1{
 	width: 50%;
@@ -246,11 +256,11 @@ body{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #7474BF 0%, #e835e2 51%, #f420ff 100%)
+	background-image: linear-gradient(to right, #8124be 0%, #f857f3 51%, #f420ff 100%)
 }
 .bt_v:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #f420ff 0%, #7474BF 51%, #7474BF 100%)
+	background-image: linear-gradient(to right, #b755d4 0%, #c226d6 51%, #8510c9 100%)
 
 }
 header{
@@ -384,7 +394,4 @@ input{
 .input-group > input{
 	border-radius: 0px 0px 0px 0px !important
 
-}
-.card-body{
-	background-color: rgb(24, 11, 59) !important;
 }
