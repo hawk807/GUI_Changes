@@ -11,61 +11,82 @@
 
 <body>
     <p class="notify">Bot Configuration</p>
-
-    <div class="form-group center">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header">
-                    Featured
-                </div>
-                <div class="card-body">
-                    <form class="form-inline">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Target</span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="TRADE" aria-label="TRADE"  id="tokenA" required aria-describedby="basic-addon1">
+    <div class="container">
+        <div class="vertical-center">
+            <div class="form-group center">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="float-left">personal-details</div>
+                            <div class="float-right"><a id="closeBtn">Close Window</a></div><br>
                         </div>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Pair</span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="TRADE" aria-label="TRADE"  id="tokenA" required aria-describedby="basic-addon1">
+                        <div class="card-body">
+                            <form class="form-inline">
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Target</span>
+                                        </div>
+                                        <input id="tokenA" type="text" class="form-control" placeholder="TRADE" aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <div class="invalid-tooltip">
+                                            Please Enter Value.
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">&nbsp</div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Pair</span>
+                                        </div>
+                                        <input id="tokenB" type="text" class="form-control" placeholder="WBNB, WETH, BUSD..." aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <div class="invalid-tooltip">
+                                            Please Enter Value.
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">&nbsp</div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Slippage</span>
+                                        </div>
+                                        <input id="slippage" type="text" class="form-control" placeholder="30%." aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <div class="invalid-tooltip">
+                                            Please Enter Value.
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">&nbsp</div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            <span class="input-group-text">Blacklist-Check</span>
+                                            </div>
+                                            <select class="custom-select" onchange="val()" id="select_id">
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">&nbsp</div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <button id="updateBtn">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                      </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="row2">
-        <h3></h3>
-        </legend>
-        <div class="personal-details">
-            <div>
-                <div><label>Target</label><input type="text" name="name" placeholder="TRADE" id="tokenA" required></div>
-                <div><label>Pair</label><input type="text" name="name" placeholder="WBNB, WETH, BUSD..." id="tokenB"
-                        required></div>
-                <div><label>Slippage</label><input type="text" name="name" placeholder="30%" id="slippage" required>
-                </div>
-
-                <div>
-                    <label>Blacklist-Check</label>
-                    <select onchange="val()" id="select_id">
-                        <option value="0">No</option>
-                        <option value="1">Yes</option>
-                    </select>
-                </div>
-
-                <button id="updateBtn">Update</button>
-            </div>
-
-            <a id="closeBtn">Close Window</a><br>
-
-        </div>
-        <script src="add.js"></script>
 </body>
+<script src="add.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
