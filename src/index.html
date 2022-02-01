@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
@@ -36,134 +38,120 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<p class="manage">Your Configurations</p>
-	</div>
-	<div class="third_bar">
-		<div class="container">
-			<div class="df pdlr10">
-				<div class="left_1">
-					<div class="profile">
+	<br>
+	<div class="container" >
+		<div class="">
+			<div class="form-group">
+				<div class="col-sm-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="float-left">Your Configuration</div>
+						</div>
+						<div class="card-body" style="display: block;">
+							<div class="df pdlr10">
+								<div class="left_1">
+									<div class="profile">
 
-						<span class="text_gray">WETH</span>
-						<span class="slash">/</span>
-						<span class="text_white">TEST</span>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
+										<span class="text_gray">WETH</span>
+										<span class="slash">/</span>
+										<span class="text_white">TEST</span>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
 
-					</div>
-					<div class="info df">
-						<span class="small_white">TestToken</span>
-						<span class="small_gray">Token: 0x8b3...f73f</span>
-						<i class="fa fa-files-o" aria-hidden="true"></i>
-						<span class="small_gray">Token: 0x8b3...f73f</span>
+									</div>
+									<div class="info df">
+										<span class="small_white">TestToken</span>
+										<span class="small_gray">Token: 0x8b3...f73f</span>
+										<i class="fa fa-files-o" aria-hidden="true"></i>
+										<span class="small_gray">Token: 0x8b3...f73f</span>
 
-						<i class="fa fa-files-o" aria-hidden="true"></i>
+										<i class="fa fa-files-o" aria-hidden="true"></i>
 
+									</div>
+								</div>
+								<div class="right_1 df">
+									<h1></h1>
+									<i class="fa fa-chevron-down"></i>
+									<span class="text-red">0.0...000242</span>
+									<div class="eth">
+										ETH 0.0..9349223
+									</div>
+
+								</div>
+								<div id="chart"></div>
+								<button id="chartBtn" class="bt_v"><i aria-hidden="true"></i> Toggle Chart</button>
+
+
+							</div>
+							<div class="df alr m3">
+								<button class="bt_3" id="notifyBtn">Configure</button>
+							</div>
+
+							<div class="df bg_gr">
+								<!--
+								<header class="df jss">
+
+									<div>
+										<span class="t_v">OPEN TRADES </span>
+										<i class="fa fa-question-circle" aria-hidden="true"></i>
+									</div>
+									<div>
+										<button class="bt_v"><i class="fa fa-lock" aria-hidden="true"></i> view on etherscan</button>
+
+									</div>
+								</header>
+							-->
+
+								<div class="box df jss">
+									<div>
+										<span>
+										</span>
+										<span>
+
+										</span>
+										<span id="console" class="t_g">
+
+
+
+
+
+										</span>
+
+										<span id="emode" class="t_g">
+									</div>
+
+									<div>
+										<span>
+
+										</span>
+										<span>
+
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="df ">
+								<button id="MempoolModeBtn" class="bt_3">MEMMODE</button>
+								<button id="emodeBtn" class="bt_3">EMODE</button>
+								<button id="fastBuy" class="bt_3">FAST BUY</button>
+								<button id="sellwinBtn" class="bt_4">SELL</button>
+
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="right_1 df">
-					<h1></h1>
-					<i class="fa fa-chevron-down"></i>
-					<span class="text-red">0.0...000242</span>
-					<div class="eth">
-						ETH 0.0..9349223
-					</div>
-
-				</div>
-				<div id="chart"></div>
-				<button id="chartBtn" class="bt_v"><i aria-hidden="true"></i> Toggle Chart</button>
-
-
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="df alr m3">
-			<button class="bt_3" id="notifyBtn">Configure</button>
-		</div>
-		<div class="df bg_gr">
-			<!-- 
-			<header class="df jss">
-				
-				<div>
-					<span class="t_v">OPEN TRADES </span>
-					<i class="fa fa-question-circle" aria-hidden="true"></i>
-				</div>
-				<div>
-					<button class="bt_v"><i class="fa fa-lock" aria-hidden="true"></i> view on etherscan</button>
-
-				</div>
-			</header>
-		-->
-
-			<div class="box df jss">
-				<div>
-					<span>
-					</span>
-					<span>
-
-					</span>
-					<span id="console" class="t_g">
-
-
-
-
-
-					</span>
-
-					<span id="emode" class="t_g">
-				</div>
-
-				<div>
-					<span>
-
-					</span>
-					<span>
-
-					</span>
-				</div>
-			</div>
-		</div>
-
-		<!-- 
-		<div class="container">
-			<div class="df bg_gr">
-
-				<div class="box df jss">
-					<div>
-						<span>
-						</span>
-						<span>
-
-						</span>
-						<span id="console" class="t_g">
-						</span>
-
-						<span id="emode" class="t_g">
-					</div>
-
-					<div>
-						<span>
-
-						</span>
-						<span>
-
-						</span>
-					</div>
-				</div>
-			</div>
-			-->
-
-		<div class="container">
-			<div class="df ">
-				<button id="MempoolModeBtn" class="bt_3">MEMMODE</button>
-				<button id="emodeBtn" class="bt_3">EMODE</button>
-				<button id="fastBuy" class="bt_3">FAST BUY</button>
-				<button id="sellwinBtn" class="bt_4">SELL</button>
-
-			</div>
-		</div>
-
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 		<script src="index.js"></script>
 </body>
 
