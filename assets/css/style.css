@@ -23,7 +23,7 @@ body{
 
 .bt_g{
 	padding: 10px;
-	border: none;
+	border: 1px solid lightblue;
 	font-size: 16px;
 	cursor: pointer;
 	margin: 10px;
@@ -31,6 +31,7 @@ body{
 	text-align: center;
 	text-transform: uppercase;
 	background-size: 200% auto;
+	border-radius: 4px;
 	color: #FFF;
 	width: 200px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -298,10 +299,10 @@ header{
 	padding: 10px 25px;
 	font-size: 16px;
 	color: #fff;
+	border: 1px solid lightblue;
 	margin: 0 8px;
 	cursor: pointer;
 	border-radius: 4px;
-
 	font-size: 12px;
 	font-family: "Arial Black", Gadget, sans-serif;
 	text-align: center;
@@ -322,6 +323,7 @@ header{
 	padding: 10px 25px;
 	font-size: 16px;
 	color: #fff;
+	border: 1px solid lightblue;
 	margin: 0 8px;
 	cursor: pointer;
 	border-radius: 4px;
@@ -355,10 +357,9 @@ header{
 }
 
 .center {
-  margin: auto;
   width: 50%;
 	text-align: center;
-	margin-left: auto;
+	margin-left: 18% !important;
   margin-right: auto;
 }
 .vertical-center {
@@ -367,4 +368,19 @@ header{
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+input{
+	border: 1px solid lightblue;
+	border-radius: 0px 20px 20px 0px !important
+	/* border-radius: 15px 50px 30px; */
+}
+.input-group-text {
+	border-radius: 20px 0px 0px 20px
+}
+.input-group-append > .input-group-text{
+	border-radius: 0px 20px 20px 0px
+}
+.input-group > input{
+	border-radius: 0px 0px 0px 0px !important
+
 }
