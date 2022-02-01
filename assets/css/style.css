@@ -385,3 +385,6 @@ input{
 	border-radius: 0px 0px 0px 0px !important
 
 }
+.card-body{
+	background-color: rgb(67, 65, 65) !important;
+}
