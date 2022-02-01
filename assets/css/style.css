@@ -19,6 +19,7 @@ body{
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	color: white;
 }
 
 .bt_g{
@@ -51,8 +52,8 @@ body{
 .second_bar{
 	color: rgb(248, 248, 248);
 	background: #160d3a;
-	border-top: 2px solid #0f0e29;
-	border-bottom: 2px solid #99cc33;
+	border-top: 2px solid #0e06f5;
+	border-bottom: 2px solid  #0e06f5;
 }
 .pl-2{
 	padding-left: 30px;
@@ -98,7 +99,7 @@ body{
 
 }
 .pdlr10{
-	background: #1f1e1e;
+	background: #1c0f3d;
 	padding: 10px 10px;
 }
 
@@ -342,7 +343,7 @@ header{
 	background-image: linear-gradient(to right, #7835ff 0%, #0303eb 51%, #0303eb 100%)
 }
 .boxed2 {
-    background-color: white;
+    background-color: rgb(41, 18, 172);
     color: black;
     /* transition: 0.5s; */
     background-color: var(--terminal-bg-color);
@@ -370,7 +371,7 @@ header{
   transform: translateY(-50%);
 }
 input{
-	border: 1px solid lightblue;
+	border: 1px solid rgb(255, 255, 255);
 	border-radius: 0px 20px 20px 0px !important
 	/* border-radius: 15px 50px 30px; */
 }
