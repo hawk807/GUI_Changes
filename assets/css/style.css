@@ -6,7 +6,7 @@
 
 body{
 	font-family: sans-serif;
-	background: #333333;
+	background: linear-gradient(to right, #0f0f3a 0%, #27134d 51%, #2f0d31 100%)
 }
 
 .container{
@@ -49,9 +49,9 @@ body{
 }
 
 .second_bar{
-	color: gray;
-	background: #1f1e1e;
-	border-top: 2px solid #1f1e1e;
+	color: rgb(248, 248, 248);
+	background: #160d3a;
+	border-top: 2px solid #0f0e29;
 	border-bottom: 2px solid #99cc33;
 }
 .pl-2{
@@ -74,7 +74,7 @@ body{
 	width: 35%;
 	text-align: center;
 	padding: 20px 0;
-	background: #333333;
+	background: #3d2f8d;
 }
 .bt_g.m2{
 	margin-left: auto;
