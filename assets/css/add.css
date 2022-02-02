@@ -1,16 +1,17 @@
 body {
     background:#320f50;
-    color:#000;
+    color:rgb(255, 255, 255);
     overflow:hidden;
 }
 
 p.notify {
-    background:#C3C3C3;
+    background:#000000;
     margin:0;
     padding: 20px;
-    text-transform:uppercase;
+   
     -webkit-app-region: drag;
 }
+
 
 .row2 {
     width:100%;
@@ -21,6 +22,10 @@ p.notify {
 
 input {
     padding:12px;
+    background:rgb(67, 17, 73);
+    color:#000000;
+    background-color: black;
+    
 }
 
 #closeBtn {
@@ -45,15 +50,18 @@ h1 {
     form {
     width: 100%;
     padding: 20px;
+    
     }
     fieldset {
     border: none;
     border-top: 1px solid #8ebf42;
+    
     }
     .account-details, .personal-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  
     }
     .account-details >div, .personal-details >div >div {
     display: flex;
@@ -62,18 +70,23 @@ h1 {
     }
     .account-details >div, .personal-details >div, input, label {
     width: 100%;
+    
     }
     label {
     padding: 0 5px;
     text-align: right;
     vertical-align: middle;
+    
     }
     input {
     padding: 5px;
     vertical-align: middle;
+    
+
     }
     .checkbox {
     margin-bottom: 10px;
+   
     }
     select, .children, .gender, .bdate-block {
     width: calc(100% + 26px);
@@ -120,20 +133,21 @@ h1 {
         margin: 10px;
         font-family: "Arial Black", Gadget, sans-serif;
         text-align: center;
-        text-transform: uppercase;
+        
         background-size: 200% auto;
         color: #FFF;
         width: 200px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         display: inline-block;
-        background-image: linear-gradient(to right, #7474BF 0%, #e835e2 51%, #f420ff 100%)
+        background-image: linear-gradient(to right, #f300df 0%,#6e40eb 70%);
     }
     button:hover{
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        background-image: linear-gradient(to right, #f420ff 0%, #7474BF 51%, #7474BF 100%)
-
+        background-image: linear-gradient(to right, #ff43ef 0%,#8154fd 70%);
     }
+        
+
+    
 
     @media (min-width: 568px) {
     .account-details >div, .personal-details >div {
@@ -141,9 +155,11 @@ h1 {
     }
     label {
     width: 40%;
+ 
     }
     input {
     width: 60%;
+
     }
     select, .children, .gender, .bdate-block {
     width: calc(60% + 16px);

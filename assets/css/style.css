@@ -2,23 +2,39 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	
 }
 
+.left{
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+	background: #160D3A;
+}
+
+
 body{
-	font-family: sans-serif;
-	background: linear-gradient(to right, #0f0f3a 0%, #27134d 51%, #2f0d31 100%)
+	font-family: 'Orbitron', sans-serif;
+	background: linear-gradient(to right, #05020e 0%, #1d0e3a 51%, #3a014b 100%)
+	
+}
+.gui-logo{
+    width: 350px;
+    height: 350px;
+    margin-top:300px;
 }
 
 .card-body{
-	background-color: rgb(24, 11, 59) !important;
+	background-color: #160D3A !important;
 }
 
 .card-header {
-	background-color:#ffffff !important;
+	background-color:#160D3A !important;
+	color:rgb(255, 255, 255)
 }
 
 .pdlr10{
-	background: #3D2F8D;
+	background: #160D3A;
 	padding: 10px 10px;
 }
 
@@ -45,28 +61,34 @@ body{
 	text-align: center;
 	text-transform: uppercase;
 	background-size: 200% auto;
-	border-radius: 4px;
+	border-radius: 1px;
 	color: #FFF;
 	width: 200px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #4f4f8a 0%, #733bb3 51%, #732bad 100%)
+	background-image: -webkit-linear-gradient(left, #2c1275 0%, #8b61ff 70%);
+    background-image: linear-gradient(to right, #341868 0%,#180b38 70%);
 }
 .bt_g:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right,  #8840c2 0%, #8a56c5 51%, #575796 100%)
+	background-image: -webkit-linear-gradient(left, #2c1275 0%, #352366 70%);
 
 }
 .topbar{
 	padding: 30px 0;
+
+
+
 }
+	
+
 
 .second_bar{
-	color: rgb(248, 248, 248);
+	
 	background: #160d3a;
-	border-top: 2px solid #0e06f5;
-	border-bottom: 2px solid  #0e06f5;
+	border-top: 1px solid rgb(255, 255, 255);
+	border-bottom: 1px solid  #ffffff;
 }
 .pl-2{
 	padding-left: 30px;
@@ -79,17 +101,13 @@ body{
 	font-size: 18px;
 }
 .right{
-	width: 65%;
+	width: 130%;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	
 }
-.left{
-	width: 35%;
-	text-align: center;
-	padding: 20px 0;
-	background: #3d2f8d;
-}
+
 .bt_g.m2{
 	margin-left: auto;
 }
@@ -102,12 +120,14 @@ body{
 
 .manage{
 	font-size: 18px;
-	color: gray;
+	color: rgb(255, 255, 255);
 	margin-top: 40px;
 	margin-bottom: 10px;
 }
 
 .third_bar{
+	background: rgb(0, 0, 0);
+	color: #fff
 
 
 }
@@ -124,18 +144,18 @@ body{
 }
 
 .text_gray{
-	color: gray;
+	color: rgb(196, 196, 196);
 	font-size: 20px;
 	font-weight: bold;
 }
 
 .text_white{
-	color: white;
+	color: rgb(255, 255, 255);
 	font-size: 26px;
 	font-weight: bold;
 }
 .slash{
-	color: gray;
+	color: rgb(255, 255, 255);
 	font-size: 28px;
 	margin: 0 2px;
 
@@ -152,7 +172,7 @@ body{
 .profile i{
 		background: #333333;
     border-radius: 100%;
-    color: gray;
+    color: rgb(255, 255, 255);
     padding: 6px;
     font-size: 17px;
     margin-left: 10px;
@@ -162,7 +182,7 @@ body{
 	background: #00cc66;
 	font-size: 12px;
 	color: #fff;
-	border-radius: 4px;
+	border-radius: 1px;
 	border: none;
 	padding: 5px 8px;
 	margin-right: 10px;
@@ -179,13 +199,13 @@ body{
 }
 
 .small_gray{
-	color: gray;
+	color: rgb(255, 255, 255);
 	font-size: 13px;
 }
 
 .info i{
 	margin: 0 5px;
-	color: gray;
+	color: rgb(255, 255, 255);
 }
 
 .info span{
@@ -229,7 +249,7 @@ body{
 }
 
 .bg_gr{
-	background: #1f1e1e;
+	background: #ffffff;
 	width: 100% ;
 	margin: 20px 0px;
 	margin-bottom: 50px;
@@ -244,7 +264,7 @@ body{
 .bt_v{
 	font-size: 12px;
 	padding: 5px;
-	border-radius: 5px;
+	border-radius: 1px;
 	cursor: pointer;
 	margin: 10px;
 	font-family: "Arial Black", Gadget, sans-serif;
@@ -256,22 +276,25 @@ body{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #8124be 0%, #f857f3 51%, #f420ff 100%)
+	background-image: -webkit-linear-gradient(left, #9400F3 0%, #6e40eb 70%);
+    background-image: linear-gradient(to right, #9400F3 0%,#6e40eb 70%);
+	
 }
 .bt_v:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #b755d4 0%, #c226d6 51%, #8510c9 100%)
+	background-image: linear-gradient(to right, #a411ff 0%,#7847ff 70%)
 
 }
 header{
 	padding: 10px;
 	border-bottom: 1px solid;
-	border-radius: 2px;
+	border-radius: 1px;
 }
 
 .bt_v i{
 	margin-right: 5px;
 }
+
 .t_v{
 	color: #666699;
 	font-weight: bold;
@@ -281,14 +304,7 @@ header{
 	color: #1a99af;
 }
 
-.box{
-	color: gray;
-	width: calc(25% - 100);
-	margin: 20px 10px;
-	background: #272b38;
-	border-radius: 5px;
-	padding: 10px 10px;
-}
+
 .box span{
 	display: block;
 	font-weight: bold;
@@ -297,7 +313,7 @@ header{
 }
 
 .t_g{
-	color: #276d3e;
+	color: #1fa84d;
 }
 
 .jc{
@@ -313,7 +329,7 @@ header{
 	border: 1px solid rgb(255, 255, 255);
 	margin: 0 8px;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: 1px;
 	font-size: 12px;
 	font-family: "Arial Black", Gadget, sans-serif;
 	text-align: center;
@@ -322,11 +338,12 @@ header{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #7474BF 0%, #e835e2 51%, #f420ff 100%)
+	background-image: linear-gradient(to right, #f300df 0%,#6e40eb 70%);
 }
+
 .bt_3:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #f420ff 0%, #7474BF 51%, #7474BF 100%)
+	background-image: linear-gradient(to right, #ff43ef 0%,#8154fd 70%);
 }
 
 .bt_4{
@@ -337,20 +354,21 @@ header{
 	border: 1px solid rgb(255, 255, 255);
 	margin: 0 8px;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: 1px;
 	font-size: 12px;
 	font-family: "Arial Black", Gadget, sans-serif;
+	font-style: bold;
 	text-align: center;
 	text-transform: uppercase;
 	background-size: 200% auto;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #0303eb 0%, #7835ff 51%, #2045ff 100%)
+	background-image: linear-gradient(to right, #0024f3 0%,#9040eb 70%);
 }
 .bt_4:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #7835ff 0%, #0303eb 51%, #0303eb 100%)
+	background-image: linear-gradient(to right, #3552fc 0%,#a053f8 70%);
 }
 .boxed2 {
     background-color: rgb(41, 18, 172);
@@ -370,9 +388,10 @@ header{
 .center {
   width: 50%;
 	text-align: center;
-	margin-left: 18% !important;
+	margin-left: 14% !important;
   margin-right: auto;
 }
+
 .vertical-center {
   margin: 0;
   position: absolute;
@@ -380,18 +399,43 @@ header{
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 input{
-	border: 1px solid rgb(255, 255, 255);
+	border: 1px solid rgb(21, 17, 90);
 	border-radius: 0px 20px 20px 0px !important
 	/* border-radius: 15px 50px 30px; */
 }
+
 .input-group-text {
 	border-radius: 20px 0px 0px 20px
+	
 }
+
 .input-group-append > .input-group-text{
 	border-radius: 0px 20px 20px 0px
 }
+
 .input-group > input{
 	border-radius: 0px 0px 0px 0px !important
-
 }
+
+.box{
+	color: rgb(0, 0, 0);
+	width: calc(25% - 100);
+	margin: 20px 10px;
+	background: #3D2F8D;
+	border-radius: 1px;
+	padding: 10px 10px;
+}
+
+
+
+
+
+
+
+.input-group-text{
+	color: rgb(255, 255, 255);
+	background-color:rgb(0, 0, 0)
+}
+

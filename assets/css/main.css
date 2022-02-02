@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
 
 body {
-    background: #262626;
+    background: #ffffff;
     color:rgb(255, 255, 255);
-    font-family: 'Montserrat';
+    font-family: 'Orbitron', sans-serif;
     margin:0;
 }
+
 
 .row {
     width:100%;
     margin-top:50px;
     color:#fff;
-    background:#1A1A1A;
-    border-bottom: 3px solid #9cd03b;
+    background:#ffffff;
+    border-bottom: 1px solid #9cd03b;
     display: grid;
     grid-template-columns: 35% auto 35%;
     align-items: center;
@@ -20,7 +21,7 @@ body {
 
 #price-container {
     margin-left: 20%;
-    background:#353535;
+    background:#ffffff;
     padding: 0 10px;
     text-align:center;
 }
@@ -45,7 +46,7 @@ button{
 	padding: 10px;
 	font-size: 16px;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: 1px;
 	border: 1px solid rgb(255, 255, 255);
 	margin: 10px;
 	font-family: "Arial Black", Gadget, sans-serif;

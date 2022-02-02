@@ -1,8 +1,11 @@
 const electron = require('electron')
 const ipc = electron.ipcRenderer
-const { getPrice } = require('../fetchdata')
-
+const data = require("../app/db/configure.json")
+const target = data.target
+const wbnb = data.pairtoken
+const axios = require('axios')
 let cooldown = false;
+
 
 
 let x = 300;
@@ -59,12 +62,21 @@ emodeBtn.addEventListener('click', function (event) {
 let pollingData;
 let chartopened = false;
 const chartBtn = document.getElementById("chartBtn");
-chartBtn.addEventListener('click', function (event) {
+chartBtn.addEventListener('click', function () {
     if (!chartopened) {
         pollingData = setInterval(async () => {
-            areaSeries.update(await getPrice())
+            axios({
+                method: 'get',
+                url: `https://bsc.api.0x.org/swap/v1/quote?buyToken=${target}&sellToken=${wbnb}&sellAmount=1`
+            }).then(res => {
+                //console.log(res.data.price)
+                let chartDataObj = {
+                    time: Date.now(),
+                    value: res.data.price
+                }
+                areaSeries.update(chartDataObj)
+            })
             chartopened = true
-
         }, 3000);
     } else {
         clearInterval(pollingData);
@@ -197,7 +209,7 @@ var areaSeries = chart.addAreaSeries({
 var darkTheme = {
     chart: {
         layout: {
-            backgroundColor: '#2B2B43',
+            backgroundColor: '#7835ff',
             lineColor: '#2B2B43',
             textColor: '#D9D9D9',
         },
@@ -238,7 +250,7 @@ function syncToTheme(theme) {
 
 var consoleElement = document.createElement('div');
 
-var console = LightweightCharts.createChart(consoleElement, {
+var Console = LightweightCharts.createChart(consoleElement, {
     width: 900,
     height: 300,
     chart: {
@@ -293,3 +305,4 @@ areaSeries.setData([
     { time: 1642081080317, value: 0.1805083578884378 }
 
 ]);
+
