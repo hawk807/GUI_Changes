@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
+
+
 *{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	
+}
+
+.title1{
+	color: #fff;
+	font-size:30px;
+	text-align: center;
+	margin-top: 80px;
+	font-family: 'Orbitron', sans-serif;
 }
 
 .left{
@@ -12,10 +24,16 @@
 	background: #160D3A;
 }
 
+.account-title{
+	color:rgb(255, 255, 255);
+	font-size:20px;
+	font-family: 'Orbitron', sans-serif;
+	
+}
 
 body{
 	font-family: 'Orbitron', sans-serif;
-	background: linear-gradient(to right, #05020e 0%, #1d0e3a 51%, #3a014b 100%)
+	background: linear-gradient(to right, #05020e 0%, #1d0e3a 51%, #30014b 100%)
 	
 }
 .gui-logo{
@@ -26,6 +44,7 @@ body{
 
 .card-body{
 	background-color: #160D3A !important;
+
 }
 
 .card-header {
@@ -33,15 +52,25 @@ body{
 	color:rgb(255, 255, 255)
 }
 
-.pdlr10{
-	background: #160D3A;
-	padding: 10px 10px;
-}
+
 
 .container{
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 5px;
+
+}
+
+.container1{
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 5px;
+	border: 0.5px solid;
+	border-color: rgb(70, 70, 70);
+}
+
+.logo-image{
+margin-top: 50px;
 }
 
 .df{
@@ -51,21 +80,29 @@ body{
 	color: rgb(255, 255, 255);
 }
 
+.bt_credentials {
+	display: center;
+	margin-left: 452px;
+	
+
+}
 .bt_g{
 	padding: 10px;
-	border: 1px solid rgb(255, 255, 255);
-	font-size: 16px;
+	border: 1px solid rgb(117, 117, 117);
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	font-size: 13px;
 	cursor: pointer;
 	margin: 10px;
 	font-family: "Arial Black", Gadget, sans-serif;
 	text-align: center;
-	text-transform: uppercase;
+	
 	background-size: 200% auto;
 	border-radius: 1px;
 	color: #FFF;
-	width: 200px;
+	width: 160px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	transition: all 0.8s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
 	background-image: -webkit-linear-gradient(left, #2c1275 0%, #8b61ff 70%);
     background-image: linear-gradient(to right, #341868 0%,#180b38 70%);
@@ -78,30 +115,35 @@ body{
 .topbar{
 	padding: 30px 0;
 
+	
+}
 
-
+.copyright1 {
+	font-size: 16px;
+	margin-top: 70px;
+	color: rgb(161, 161, 161);
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+	
 }
 	
-
-
 .second_bar{
-	
 	background: #160d3a;
-	border-top: 1px solid rgb(255, 255, 255);
-	border-bottom: 1px solid  #ffffff;
+	width: 50;
+	max-width: 10;
 }
 .pl-2{
 	padding-left: 30px;
+	
 }
 .m2{
 	margin-right: 15px;
 }
 .right p{
-	padding-left: 15px;
-	font-size: 18px;
+	padding-left: 20px;
+	
 }
 .right{
-	width: 130%;
+	width: 67%;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -195,12 +237,14 @@ body{
 
 .small_white{
 	color: #fff;
-	font-size: 13px;
+	font-size: 15px;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .small_gray{
 	color: rgb(255, 255, 255);
-	font-size: 13px;
+	font-size: 15px;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .info i{
@@ -249,7 +293,7 @@ body{
 }
 
 .bg_gr{
-	background: #ffffff;
+	background: #2c1275;
 	width: 100% ;
 	margin: 20px 0px;
 	margin-bottom: 50px;
@@ -262,7 +306,9 @@ body{
 }
 
 .bt_v{
-	font-size: 12px;
+	font-size: 11px;
+	border: 0.5px solid;
+	border-color:rgb(172, 172, 172) ;
 	padding: 5px;
 	border-radius: 1px;
 	cursor: pointer;
@@ -271,13 +317,14 @@ body{
 	text-align: center;
 	text-transform: uppercase;
 	background-size: 200% auto;
-	color: #FFF;
+	color: rgb(255, 255, 255);
 	width: 200px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
 	background-image: -webkit-linear-gradient(left, #9400F3 0%, #6e40eb 70%);
-    background-image: linear-gradient(to right, #9400F3 0%,#6e40eb 70%);
+	background-image: linear-gradient(to right, #9400F3 0%,#6e40eb 70%);
+	
 	
 }
 .bt_v:hover{
@@ -313,7 +360,7 @@ header{
 }
 
 .t_g{
-	color: #1fa84d;
+	color: #ffffff;
 }
 
 .jc{
@@ -324,7 +371,6 @@ header{
 .bt_3{
 	border: none;
 	padding: 10px 25px;
-	font-size: 16px;
 	color: #fff;
 	border: 1px solid rgb(255, 255, 255);
 	margin: 0 8px;
@@ -334,7 +380,7 @@ header{
 	font-family: "Arial Black", Gadget, sans-serif;
 	text-align: center;
 	text-transform: uppercase;
-	background-size: 200% auto;
+	background-size: 150% auto;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
@@ -349,7 +395,7 @@ header{
 .bt_4{
 	border: none;
 	padding: 10px 25px;
-	font-size: 16px;
+	font-size: 15px;
 	color: #fff;
 	border: 1px solid rgb(255, 255, 255);
 	margin: 0 8px;
@@ -364,11 +410,11 @@ header{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #0024f3 0%,#9040eb 70%);
+	background-image: linear-gradient(to right, #1c37cf 0%,#3f1dd6 70%);
 }
 .bt_4:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #3552fc 0%,#a053f8 70%);
+	background-image: linear-gradient(to right, #1a31b6 0%,#460096 70%);
 }
 .boxed2 {
     background-color: rgb(41, 18, 172);
@@ -427,11 +473,6 @@ input{
 	border-radius: 1px;
 	padding: 10px 10px;
 }
-
-
-
-
-
 
 
 .input-group-text{

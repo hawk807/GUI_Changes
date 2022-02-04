@@ -1,6 +1,8 @@
 const electron = require('electron')
 const ipc = electron.ipcRenderer
 const data = require("../app/db/configure.json")
+const creds = require("../app/db/credentials.json")
+const { ERCABI } = require('../app/abi')
 const target = data.target
 const wbnb = data.pairtoken
 const axios = require('axios')
@@ -64,6 +66,7 @@ let chartopened = false;
 const chartBtn = document.getElementById("chartBtn");
 chartBtn.addEventListener('click', function () {
     if (!chartopened) {
+        updateTradeData()
         pollingData = setInterval(async () => {
             axios({
                 method: 'get',
@@ -84,6 +87,38 @@ chartBtn.addEventListener('click', function () {
     }
 
 })
+
+async function updateTradeData() {
+    if (creds.RPC != '') {
+
+        try {
+            const Web3 = require('web3')
+            const fetchWeb3 = new Web3(creds.RPC.toString());
+            console.log(creds.RPC.toString())
+            let tokenAContract = await new fetchWeb3.eth.Contract(ERCABI, wbnb);
+            let tokenA = await tokenAContract.methods.symbol().call({ from: creds.address })
+
+            let tokenBContract = await new fetchWeb3.eth.Contract(ERCABI, target);
+            let tokenB = await tokenBContract.methods.symbol().call()
+
+            tokenA != undefined ? document.getElementById("wbnb").innerHTML = tokenA.toString() : console.warn('TokenA: Error Fetching name')
+            tokenB != undefined ? document.getElementById("target").innerHTML = tokenB.toString() : console.warn('TokenB: Error Fetching name')
+            document.getElementById("addressA").innerHTML = `${tokenA}: ${wbnb.slice(0, 5)}...${wbnb.slice(wbnb.length - 4, wbnb.length)}`
+            document.getElementById("addressB").innerHTML = `${tokenB}: ${target.slice(0, 5)}...${target.slice(target.length - 4, target.length)}`
+        } catch (error) {
+            console.log(error)
+
+        }
+
+
+
+
+    }
+    else {
+        return
+    }
+    //  document.getElementById("wbnb").innerHTML
+}
 
 
 
