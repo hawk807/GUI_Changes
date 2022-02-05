@@ -16,24 +16,29 @@
 	font-family: 'Orbitron', sans-serif;
 }
 
+
+
 .left{
 	width: 100%;
 	text-align: center;
 	padding: 5px 0;
-	background: #160D3A;
+	background-color: transparent;
+	
+	
+	
 }
 
-.account-title{
+.account-title {
 	color:rgb(255, 255, 255);
 	font-size:20px;
 	font-family: 'Orbitron', sans-serif;
 	margin-top: 5px;
-	
+	display: centre;
 }
 
 body{
 	font-family: 'Orbitron', sans-serif;
-	background: linear-gradient(to right, #05020e 0%, #1d0e3a 51%, #30014b 100%)
+	background: linear-gradient(to right, #05020e 0%, #1a0d35 51%, #230036 100%)
 	
 }
 .gui-logo{
@@ -47,16 +52,16 @@ body{
 }
 
 .card-body{
-	background-color: #160D3A !important;
+	background-color: #100929 !important;
 }
 
 .right {
-	background-color: #160D3A;
+	background-color: #100929;
 	display: flex;
 }
 
 .card-header {
-	background-color:#160D3A !important;
+	background-color:#100929 !important;
 	color:rgb(255, 255, 255)
 }
 
@@ -66,6 +71,7 @@ body{
 	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0 5px;
+	
 
 }
 
@@ -91,32 +97,29 @@ margin-top: 50px;
 .bt_credentials {
 	display: center;
 	margin-left: 452px;
-	
-
 }
+
 .bt_g{
 	padding: 4px;
-	border: 1px solid rgb(117, 117, 117);
+	border: 1px solid rgb(90, 90, 90);
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	font-size: 12px;
 	cursor: pointer;
-	margin: 10px;
+	margin: 8px;
 	font-family: "Arial Black", Gadget, sans-serif;
-	text-align: center;
 	background-size: 200% auto;
 	border-radius: 1px;
 	color: #FFF;
 	width: 130px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.8s cubic-bezier(.25,.8,.25,1);
-	display: inline-block;
-	background-image: -webkit-linear-gradient(left, #2c1275 0%, #8b61ff 70%);
     background-image: linear-gradient(to right, #341868 0%,#180b38 70%);
 }
+
 .bt_g:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: -webkit-linear-gradient(left, #2c1275 0%, #352366 70%);
+	background-image: linear-gradient(to right, #df3cd1 0%,#8154fd 70%);
 
 }
 .topbar{
@@ -172,11 +175,24 @@ margin-top: 50px;
 	margin-bottom: 10px;
 }
 
+.exchange-buttons-container{
+	margin-top: 10px;
+	margin-left: 7px;
+}
+
 .third_bar{
 	background: rgb(0, 0, 0);
 	color: #fff
+}
 
+.card{
+	border: 1px solid rgb(49, 49, 49);
+	
+}
 
+.line {
+	border: 0.1px solid rgb(61, 61, 61);
+	border-width: 1px
 }
 
 
@@ -296,12 +312,15 @@ margin-top: 50px;
 	margin: 20px 0;
 }
 
+.sell-btn{
+	margin-left: 10;
+}
+
 .bg_gr{
-	background: #2c1275;
+	background: #1c0b46;
 	width: 100% ;
 	margin: 20px 0px;
 	margin-bottom: 50px;
-
 }
 
 .jss{
@@ -309,7 +328,7 @@ margin-top: 50px;
 }
 
 .bt_v{
-	font-size: 10px;
+	font-size: 11px;
 	border: 0.5px solid;
 	border-color:rgb(172, 172, 172) ;
 	padding: 5px;
@@ -318,7 +337,6 @@ margin-top: 50px;
 	margin: 10px;
 	font-family: "Arial Black", Gadget, sans-serif;
 	text-align: center;
-	text-transform: uppercase;
 	background-size: 200% auto;
 	color: rgb(255, 255, 255);
 	width: 150px;
@@ -371,7 +389,7 @@ header{
 
 .bt_3{
 	padding: 5px;
-	border: 0.5px solid rgb(209, 209, 209);
+	border: 0.5px solid rgb(153, 153, 153);
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	font-size: 11px;
@@ -388,17 +406,17 @@ header{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #a700da 0%,#6e40eb 70%);
+	background-image: linear-gradient(to right, #a700da 0%,#9040eb 70%);
 }
 
 .bt_3:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #ff43ef 0%,#8154fd 70%);
+	background-image: linear-gradient(to right, #ff43ef 0%,#9d54fd 70%);
 }
 
 .bt_4{
 	padding: 5px;
-	border: 1px solid rgb(226, 226, 226);
+	border: 1px solid rgb(138, 138, 138);
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	font-size: 11px;
@@ -460,7 +478,6 @@ input{
 
 .input-group-text {
 	border-radius: 20px 0px 0px 20px
-	
 }
 
 .input-group-append > .input-group-text{
@@ -475,7 +492,7 @@ input{
 	color: rgb(0, 0, 0);
 	width: calc(25% - 100);
 	margin: 20px 10px;
-	background: #3D2F8D;
+	background: #2b2163;
 	border-radius: 1px;
 	padding: 10px 10px;
 }
