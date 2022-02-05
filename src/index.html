@@ -13,11 +13,11 @@
 	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<div class='nav-brand'> 
-	<a href='https://blockinetics.com'> 
-	  <img src='static/images/logo.png' alt='Official logo' width='100px' height='50px'> 
-	</a> 
-   </div> 
+<div class='nav-brand'>
+	<a href='https://blockinetics.com'>
+		<img src='static/images/logo.png' alt='Official logo' width='100px' height='50px'>
+	</a>
+</div>
 
 
 <div class="title1">
@@ -27,161 +27,160 @@
 </div>
 
 
-	<div class="container">
-		<div class="form-group">
-			<div class="container">
-				<div class="bt_credentials">
-					<button id="credButton" class="bt_g">Credentials</button>
-				</div>
-			</div>
-		</div>
-		
-		<div class="second_bar">
-			<div class="container1">
-				<div class="df pl-2">
-			
-					
-					<div class="left">
-						
-						<div class="account-title" >
-						<p>Account</p>
-						</div>
-						<p>Current BOT Balance</p>
-						<div class="amount">0 ETH </div>
-					</div>
-					<div class="right">
-						<button id="withdrawBtn" class="bt_g m2">Withdraw</button>
-						<button id="transferBtn" class="bt_g">Transfer</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br>
+<div class="container">
+	<div class="form-group">
 		<div class="container">
-			<div class="">
-				<div class="form-group">
-					<div class="col-sm-12">
-						<div class="card">
-							<div class="card-header">
-								<div class="float-left">Your Configuration</div>
+			<div class="bt_credentials">
+				<button id="credButton" class="bt_g">Credentials</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="second_bar">
+		<div class="container1">
+			<div class="df pl-2">
+
+
+				<div class="left">
+
+					<div class="account-title">
+						<p>Account</p>
+					</div>
+					<p>Current BOT Balance</p>
+					<div class="amount">0 ETH </div>
+				</div>
+				<div class="right">
+					<button id="withdrawBtn" class="bt_g m2">Withdraw</button>
+					<button id="transferBtn" class="bt_g">Transfer</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="">
+			<div class="form-group">
+				<div class="col-sm-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="float-left">Your Configuration</div>
+						</div>
+						<div class="card-body" style="display: block;">
+							<div class="df pdlr10">
+								<div class="left_1">
+									<div class="profile">
+
+										<span id="wbnb" class="text_gray">WETH</span>
+										<span class="slash">/</span>
+										<span id="target" class="text_white">TEST</span>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+
+									</div>
+									<div class="info df">
+										<span class="small_white"></span>
+										<span id="addressA" class="small_gray">Token: 0x8b3...f73f</span>
+										<i class="fa fa-files-o" aria-hidden="true"></i>
+										<span id="addressB" class="small_gray">Token: 0x8b3...f73f</span>
+
+										<i class="fa fa-files-o" aria-hidden="true"></i>
+
+									</div>
+								</div>
+								<div class="right_1 df">
+									<h1></h1>
+
+									<span class="text-red"></span>
+									<div class="eth">
+
+									</div>
+
+								</div>
+								<div id="chart"></div>
+								<button id="chartBtn" class="bt_v"><i aria-hidden="true"></i> Toggle Chart</button>
+
+
+
 							</div>
-							<div class="card-body" style="display: block;">
-								<div class="df pdlr10">
-									<div class="left_1">
-										<div class="profile">
+							<div class="df alr m3">
+								<button class="bt_3" id="notifyBtn">Configure</button>
 
-											<span id="wbnb" class="text_gray">WETH</span>
-											<span class="slash">/</span>
-											<span id="target" class="text_white">TEST</span>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
 
-										</div>
-										<div class="info df">
-											<span class="small_white"></span>
-											<span id="addressA" class="small_gray">Token: 0x8b3...f73f</span>
-											<i class="fa fa-files-o" aria-hidden="true"></i>
-											<span id="addressB" class="small_gray">Token: 0x8b3...f73f</span>
+							</div>
 
-											<i class="fa fa-files-o" aria-hidden="true"></i>
+							<div class="df bg_gr">
 
-										</div>
-									</div>
-									<div class="right_1 df">
-										<h1></h1>
+								<header class="df jss">
 
-										<span class="text-red"></span>
-										<div class="eth">
-
-										</div>
+									<div>
+										<span class="t_v"> Console </span>
 
 									</div>
-									<div id="chart"></div>
-									<button id="chartBtn" class="bt_v"><i aria-hidden="true"></i> Toggle Chart</button>
-									
+									<div>
+										<button class="bt_v"> view on
+											etherscan</button>
+
+									</div>
+								</header>
 
 
-								</div>
-								<div class="df alr m3">
-									<button class="bt_3" id="notifyBtn">Configure</button>
-								
-									
-								</div>
+								<div class="box df jss">
+									<div>
+										<span id="console" class="t_g">
 
-								<div class="df bg_gr">
+										</span>
 
-									<header class="df jss">
+										<span id="emode" class="t_g">
+									</div>
 
-										<div>
-											<span class="t_v"> Console </span>
+									<div>
+										<span>
 
-										</div>
-										<div>
-											<button class="bt_v"> view on
-												etherscan</button>
+										</span>
+										<span>
 
-										</div>
-									</header>
-
-
-									<div class="box df jss">
-										<div>
-											<span id="console" class="t_g">
-
-											</span>
-
-											<span id="emode" class="t_g">
-										</div>
-
-										<div>
-											<span>
-
-											</span>
-											<span>
-
-											</span>
-										</div>
+										</span>
 									</div>
 								</div>
+							</div>
 
-								<div class="df ">
-									<button id="MempoolModeBtn" class="bt_3">MEMMODE</button>
-									<button id="emodeBtn" class="bt_3">EMODE</button>
-									<button id="fastBuy" class="bt_3">FAST BUY</button>
-									<button id="sellwinBtn" class="bt_4">SELL</button>
-									
+							<div class="df ">
+								<button id="MempoolModeBtn" class="bt_3">MEMMODE</button>
+								<button id="emodeBtn" class="bt_3">EMODE</button>
+								<button id="fastBuy" class="bt_3">FAST BUY</button>
+								<button id="sellwinBtn" class="bt_4">SELL</button>
 
-								</div>
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="copyright1">
-			<p>
-				© 2022 Blockinetics. All Rights Reserved.
-			
-			</p>
-		</div>
+	<div class="copyright1">
+		<p>
+			© 2022 Blockinetics. All Rights Reserved.
 
-		
-	
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-			crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-			crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-			crossorigin="anonymous"></script>
-		<script src="index.js"></script>
-</body>
+		</p>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+	</body>
 
 
 
 
 
 </html>
-
