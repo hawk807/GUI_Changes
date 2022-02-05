@@ -20,7 +20,7 @@
 .left{
 	width: 100%;
 	text-align: center;
-	padding: 20px 0;
+	padding: 5px 0;
 	background: #160D3A;
 }
 
@@ -28,8 +28,11 @@
 	color:rgb(255, 255, 255);
 	font-size:20px;
 	font-family: 'Orbitron', sans-serif;
+	margin-top: 5px;
 	
 }
+
+
 
 body{
 	font-family: 'Orbitron', sans-serif;
@@ -42,9 +45,17 @@ body{
     margin-top:300px;
 }
 
+.balance{
+	color: rgb(255, 255, 255)
+}
+
 .card-body{
 	background-color: #160D3A !important;
+}
 
+.right {
+	background-color: #160D3A;
+	display: flex;
 }
 
 .card-header {
@@ -87,7 +98,7 @@ margin-top: 50px;
 
 }
 .bt_g{
-	padding: 10px;
+	padding: 5px;
 	border: 1px solid rgb(117, 117, 117);
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
@@ -114,8 +125,6 @@ margin-top: 50px;
 }
 .topbar{
 	padding: 30px 0;
-
-	
 }
 
 .copyright1 {
@@ -370,7 +379,7 @@ header{
 
 .bt_3{
 	border: none;
-	padding: 10px 25px;
+	padding: 5px 15px;
 	color: #fff;
 	border: 1px solid rgb(255, 255, 255);
 	margin: 0 8px;
@@ -384,7 +393,7 @@ header{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #f300df 0%,#6e40eb 70%);
+	background-image: linear-gradient(to right, #a700da 0%,#6e40eb 70%);
 }
 
 .bt_3:hover{
@@ -412,9 +421,10 @@ header{
 	display: inline-block;
 	background-image: linear-gradient(to right, #1c37cf 0%,#3f1dd6 70%);
 }
+
 .bt_4:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #1a31b6 0%,#460096 70%);
+	background-image: linear-gradient(to right, #2331ff 0%,#0c60df 70%);
 }
 .boxed2 {
     background-color: rgb(41, 18, 172);
