@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
 
 
 *{
@@ -14,9 +17,8 @@
 	text-align: center;
 	margin-top: 80px;
 	font-family: 'Orbitron', sans-serif;
+	font-style:bold;
 }
-
-
 
 .left{
 	width: 100%;
@@ -28,21 +30,17 @@
 
 .nav-link {
 	color: white;
+	font-size: 13px
 }
 
 .nav-link:hover{
 	color: #7b5eff;
-	
-
 }
 
 
 .navbar{
-	background-color: rgb(0, 0, 0);
+	background: linear-gradient(to right, #000000 0%, #1a0d35 51%, #230036 100%)
 }
-
-
-
 
 .account-title {
 	color:rgb(255, 255, 255);
@@ -54,9 +52,9 @@
 
 body{
 	font-family: 'Orbitron', sans-serif;
-	background: linear-gradient(to right, #05020e 0%, #1a0d35 51%, #230036 100%)
-
+	background: linear-gradient(to right, #000000 0%, #1a0d35 51%, #230036 100%)
 }
+
 .gui-logo{
     width: 350px;
     height: 350px;
@@ -65,38 +63,41 @@ body{
 
 .balance{
 	color: rgb(255, 255, 255)
+	font-family 'Poppins', sans-serif;
 }
 
 .card-body{
-	background-color: #100929 !important;
+	background-color: #0e0824 !important;
 }
 
 .right {
-	background-color: #100929;
+	background-color: #0e0824;
 	display: flex;
 }
 
 .card-header {
-	background-color:#100929 !important;
+	background-color:#0e0824 !important;
 	color:rgb(255, 255, 255)
 }
 
 
 
 .container{
-	max-width: 1100px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 5px;
+	display: center;
 
 
 }
 
 .container1{
-	max-width: 1100px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 5px;
 	border: 0.5px solid;
-	border-color: rgb(70, 70, 70);
+	border-color: rgb(31, 31, 31);
+	
 }
 
 .logo-image{
@@ -118,17 +119,17 @@ margin-top: 50px;
 .bt_g{
 	padding: 4px;
 	border-radius: 25px;
-	border: 1px solid rgb(90, 90, 90);
+	border: 1.5px solid rgb(36, 36, 36);
 	font-size: 12px;
 	cursor: pointer;
 	margin: 8px;
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family:'Poppins', sans-serif;
 	background-size: 200% auto;
 	color: #FFF;
 	width: 130px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.8s cubic-bezier(.25,.8,.25,1);
-    background-image: linear-gradient(to right, #341868 0%,#180b38 70%);
+    background-image: linear-gradient(to right, #180b38 0%,#180b38 70%);
 }
 
 .bt_g:hover{
@@ -149,7 +150,7 @@ margin-top: 50px;
 }
 
 .second_bar{
-	background: #160d3a;
+	background: #0e0824;
 	width: 50;
 	max-width: 10;
 }
@@ -200,12 +201,11 @@ margin-top: 50px;
 }
 
 .card{
-	border: 1px solid rgb(49, 49, 49);
-
+	border: 2px solid rgb(27, 27, 27);
 }
 
 .line {
-	border: 0.1px solid rgb(61, 61, 61);
+	border: 0.1px solid rgb(49, 49, 49);
 	border-width: 1px
 }
 
@@ -271,14 +271,14 @@ margin-top: 50px;
 
 .small_white{
 	color: #fff;
-	font-size: 15px;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+	font-size: 13px;
+	font-family:'Poppins', sans-serif;
 }
 
 .small_gray{
 	color: rgb(255, 255, 255);
-	font-size: 15px;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+	font-size: 13px;
+	font-family:'Poppins', sans-serif;
 }
 
 .info i{
@@ -331,7 +331,7 @@ margin-top: 50px;
 }
 
 .bg_gr{
-	background: #1c0b46;
+	background: #130831;
 	width: 100% ;
 	margin: 20px 0px;
 	margin-bottom: 50px;
@@ -342,14 +342,14 @@ margin-top: 50px;
 }
 
 .bt_v{
-	font-size: 11px;
-	border: 0.5px solid;
-	border-color:rgb(172, 172, 172) ;
+	font-size: 12px;
+	border: 1.5px solid;
+	border-color:rgb(49, 49, 49) ;
 	padding: 5px;
 	border-radius: 25px;
 	cursor: pointer;
 	margin: 10px;
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	background-size: 200% auto;
 	color: rgb(255, 255, 255);
@@ -357,13 +357,13 @@ margin-top: 50px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: -webkit-linear-gradient(left, #9400F3 0%, #6e40eb 70%);
-	background-image: linear-gradient(to right, #9400F3 0%,#6e40eb 70%);
+	background-image: linear-gradient(to right, #341868 0%,#180b38 70%);
+	background-image: linear-gradient(to right, #341868 0%,#180b38 70%);
 }
 
 .bt_v:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #a411ff 0%,#7847ff 70%)
+	background-image: linear-gradient(to right, #ff43ef 0%,#9d54fd 70%);
 }
 
 header{
@@ -403,11 +403,11 @@ header{
 
 .bt_3{
 	padding: 5px;
-	border: 0.5px solid rgb(153, 153, 153);
+	border: 0px solid rgb(138, 138, 138);
 	font-size: 11px;
 	cursor: pointer;
 	margin: 10px;
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	background-size: 100% auto;
 	border-radius: 25px;
@@ -418,7 +418,7 @@ header{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #a700da 0%,#9040eb 70%);
+	background-image: linear-gradient(to right, #ba42ff 0%,#613bca 70%);
 }
 
 .bt_3:hover{
@@ -428,11 +428,11 @@ header{
 
 .bt_4{
 	padding: 5px;
-	border: 1px solid rgb(138, 138, 138);
-	font-size: 11px;
+	border: 1.5px solid rgb(122, 122, 122);
+	font-size: 12px;
 	cursor: pointer;
 	margin: 10px;
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	background-size: 100% auto;
 	border-radius: 25px;
@@ -450,6 +450,7 @@ header{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	background-image: linear-gradient(to right, #2331ff 0%,#0c60df 70%);
 }
+
 .boxed2 {
     background-color: rgb(41, 18, 172);
     color: black;
@@ -491,11 +492,25 @@ input{
 }
 
 .input-group-append > .input-group-text{
-	border-radius: 0px 20px 20px 0px
+	border-radius: 0px 20px 20px 0px;
+	background-color: #0e0824
 }
 
 .input-group > input{
-	border-radius: 0px 0px 0px 0px !important
+	border-radius: 0px 0px 0px 0px !important;
+	background-color: #0e0824
+}
+
+.input-group >input:hover{
+	background-color:#0e0824
+}
+
+.input-group >:hover{
+	background-color:#0e0824
+}
+
+.input-group-append >input:hover{
+	background-color:#0e0824
 }
 
 .box{
@@ -507,10 +522,10 @@ input{
 	padding: 10px 10px;
 }
 
-
 .input-group-text{
 	color: rgb(255, 255, 255);
-	background-color:rgb(0, 0, 0)
+	background-color:#0e0824;
+	border: 1.5px solid rgb(48, 48, 48);
 }
 
 .nav-brand > a > img{
@@ -521,31 +536,33 @@ button{
 	padding: 5px;
 	font-size: 11px;
 	cursor: pointer;
-	border-radius: 0.5px;
-	border: 0.5px solid rgb(175, 175, 175);
+	border-radius: 2px;
+	border: 2px solid rgb(175, 175, 175);
 	margin: 10px;
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	text-align: center;
-
 	background-size: 100% auto;
 	color: #FFF;
 	width: 60px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	display: inline-block;
-	background-image: linear-gradient(to right, #7474BF 0%, #e835e2 51%, #f420ff 100%)
+	background-image: linear-gradient(to right, #a411ff 0%,#7847ff 70%)
 }
+
 button:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	background-image: linear-gradient(to right, #f420ff 0%, #7474BF 51%, #7474BF 100%)
-
 }
+
 .card-header{
 	border-radius: 25px 25px 0px 0px!important;
 }
+
 .card-body{
 	border-radius: 0px 0px 25px 25px!important;
 }
+
 .card{
 	border-radius: 25px;
   background: transparent !important;
