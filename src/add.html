@@ -2,91 +2,128 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/add.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
-        .input-group > input{
+        .input-group>input {
             border-radius: 0px 20px 20px 0px !important
         }
-        .input-group > select{
+
+        .input-group>select {
             border-radius: 0px 20px 20px 0px !important
         }
     </style>
 </head>
 
 <body>
-    <p class="notify">Bot Configuration</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html"> <img src="./../static/images/logo.png"
+                class="d-inline-block align-top" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./add.html">Add <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sell.html">Sell</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./transfer.html">Transfer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./credentials.html">Credentials</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="title1">
+        <p>
+            Add
+        </p>
+    </div>
     <div class="container">
-        <div class="vertical-center">
-            <div class="form-group center">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="float-left">personal details</div>
-                            <div class="float-right"><a id="closeBtn">Close Window</a></div><br>
-                        </div>
-                        <div class="card-body">
-                            <form class="form-inline">
-                                <div class="form-row">
-                                    <div class="col-md-12">
-                                        <div class="input-group">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="float-left">personal details</div>
+
+                    </div>
+                    <div class="card-body">
+                        <form class="form-inline">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">Target</span>
                                         </div>
-                                        <input id="tokenA" type="text" class="form-control" placeholder="TRADE" aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <input id="tokenA" type="text" class="form-control" placeholder="TRADE"
+                                            aria-describedby="validationTooltipUsernamePrepend" required>
                                         <div class="invalid-tooltip">
                                             Please Enter Value.
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">&nbsp</div>
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Pair</span>
-                                        </div>
-                                        <input id="tokenB" type="text" class="form-control" placeholder="WBNB, WETH, BUSD..." aria-describedby="validationTooltipUsernamePrepend" required>
-                                        <div class="invalid-tooltip">
-                                            Please Enter Value.
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">&nbsp</div>
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Slippage</span>
-                                        </div>
-                                        <input id="slippage" type="text" class="form-control" placeholder="30%." aria-describedby="validationTooltipUsernamePrepend" required>
-                                        <div class="invalid-tooltip">
-                                            Please Enter Value.
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">&nbsp</div>
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                            <span class="input-group-text">Blacklist-Check</span>
-                                            </div>
-                                            <select class="custom-select" onchange="val()" id="select_id">
-                                                <option value="0">No</option>
-                                                <option value="1">Yes</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">&nbsp</div>
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                            <button id="updateBtn">Update</button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-md-12">&nbsp</div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Pair</span>
+                                        </div>
+                                        <input id="tokenB" type="text" class="form-control"
+                                            placeholder="WBNB, WETH, BUSD..."
+                                            aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <div class="invalid-tooltip">
+                                            Please Enter Value.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">&nbsp</div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Slippage</span>
+                                        </div>
+                                        <input id="slippage" type="text" class="form-control" placeholder="30%."
+                                            aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <div class="invalid-tooltip">
+                                            Please Enter Value.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">&nbsp</div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Blacklist-Check</span>
+                                        </div>
+                                        <select class="custom-select" onchange="val()" id="select_id">
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">&nbsp</div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <button class="bt_v" id="updateBtn">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

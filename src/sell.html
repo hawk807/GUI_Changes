@@ -2,82 +2,112 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/add.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
 <body>
-    <p class="notify">Sell Process</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html"> <img src="./../static/images/logo.png"
+                class="d-inline-block align-top" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./add.html">Add <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./sell.html">Sell</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./transfer.html">Transfer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./credentials.html">Credentials</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="title1">
+        <p>
+            Sell
+        </p>
+    </div>
     <div class="container">
-        <div class="vertical-center">
-            <div class="form-group center">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="float-left">Transfer Amount</div>
-                            <div class="float-right"><a id="closeBtn">Close Window</a></div><br>
-                        </div>
-                        <div class="card-body">
-                            <form class="form-inline">
-                                <div class="form-row">
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                            <span class="input-group-text">Sell Amount</span>
-                                            <input type="text" class="form-control"
-                                                aria-label="Amount (to the nearest unit)">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">.00</span>
-                                                <span class="input-group-text">
-                                                    <select class="custom-select" id="inputGroupSelect01">
-                                                        <option selected>ETH</option>
-                                                        <option>DODGE</option>
-                                                        <option>BITCOIN</option>
-                                                    </select>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">&nbsp</div>
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fal fa-arrow-down"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">&nbsp</div>
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Slippage</span>
-                                            </div>
-                                            <input type="text" class="form-control"
-                                                aria-label="Amount (to the nearest unit)">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">.00</span>
-                                                <span class="input-group-text">
-                                                    <select class="custom-select" id="inputGroupSelect01">
-                                                        <option selected>ETH</option>
-                                                        <option>DODGE</option>
-                                                        <option>BITCOIN</option>
-                                                    </select>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">&nbsp</div>
-                                    <div class="col-md-12">
-                                        <div class="col-md-12">
-                                            <button id="updateBtn">Sell</button>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="float-left">Transfer Amount</div>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-inline">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-text">Sell Amount</span>
+                                        <input type="text" class="form-control"
+                                            aria-label="Amount (to the nearest unit)">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                            <span class="input-group-text">
+                                                <select class="custom-select" id="inputGroupSelect01">
+                                                    <option selected>ETH</option>
+                                                    <option>DODGE</option>
+                                                    <option>BITCOIN</option>
+                                                </select>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-md-12">&nbsp</div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-arrow-down"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">&nbsp</div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Slippage</span>
+                                        </div>
+                                        <input type="text" class="form-control"
+                                            aria-label="Amount (to the nearest unit)">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                            <span class="input-group-text">
+                                                <select class="custom-select" id="inputGroupSelect01">
+                                                    <option selected>ETH</option>
+                                                    <option>DODGE</option>
+                                                    <option>BITCOIN</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">&nbsp</div>
+                                <div class="col-md-12">
+                                    <div class="col-md-12">
+                                        <button class="bt_v" id="updateBtn">Sell</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
