@@ -27,24 +27,12 @@
 .nav-link {
 	color: #fff
 }
-
-.nav-item{
-	color: #fff
-}
-
 .navbar{
 	background-color: rgb(0, 0, 0);
 }
 
-.nav-link:hover{
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #df3cd1 0%,#8154fd 70%);
-}
-.nav-item:hover{
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background-image: linear-gradient(to right, #df3cd1 0%,#8154fd 70%);
 
-}
+
 
 .account-title {
 	color:rgb(255, 255, 255);
