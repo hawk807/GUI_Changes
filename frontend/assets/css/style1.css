@@ -68,17 +68,60 @@
     padding: 0;
 }
 
-.divimage{
-    
+
+
+
+
+.wow {
+    color: white;
+    position: center;
+
 }
 
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #000000;
+    color: white
 }
 .darker-blue{
     background: linear-gradient(180deg,#000000 0,#0f0240 25%,#400959 40%,#000000 65%,#0f0240);
 }
+.tiers{
+    color:rgb(255, 255, 255)
+}
+ol {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ol li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgb(255, 255, 255); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+  .col-13 {
+    position: center;
+    color: white; 
+   
+}
+
+.tier-package{
+    margin-top: 50px;
+}
+
+.list{
+    margin-left: 140px;
+}
+  
+.tier-title{
+    font-family: 'Poppins', sans-serif;
+    position: center;
+    margin-left: 170px;
+}
+
 h1,
 h2,
 h3,
@@ -669,7 +712,7 @@ ol {
 }
 .dream-btn {
 
-    border: 1px solid #a3a3a3;
+    border: 1.5px solid #a3a3a3;
     border-radius: 1px;
     position: relative;
     z-index: 1;
@@ -693,12 +736,13 @@ ol {
 }
 
 .dream-btn:hover {
-    background-image: linear-gradient(to right, #f11ed5 0%,#7841c0 70%);
+    background-image: linear-gradient(to right, #fd46ee 0%,#5425d4 70%);
+    border: 1.5px solid white;
+    
   
     color: #fff;
-
-    
 }
+
 
 /* ##### 2.0 Header Area CSS ##### */
 

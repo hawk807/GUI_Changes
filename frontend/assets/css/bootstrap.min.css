@@ -2435,6 +2435,38 @@ select.form-control-lg:not([size]):not([multiple]) {
     }
 }
 
+.btn-tier{
+   
+    border: 1.5px solid #a3a3a3;
+    border-radius: 1px;
+    position: center;
+    z-index: 1;
+    min-width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    background-size: 200% auto;
+    color: #fff;
+    box-shadow: 0 3ox 20px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    background-image: linear-gradient(to right, #000000 0%,#000000 80%);
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    margin-top:40px;
+    margin-left: 210px
+}
+
+.btn-tier:hover {
+    background-image: linear-gradient(to right, #fd46ee 0%,#5425d4 70%);
+    border: 1.5px solid white;
+    color: white;
+}
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -2445,7 +2477,7 @@ select.form-control-lg:not([size]):not([multiple]) {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
