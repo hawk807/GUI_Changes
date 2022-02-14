@@ -590,6 +590,7 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto
+   
 }
 
 @media (min-width:576px) {
@@ -2436,7 +2437,6 @@ select.form-control-lg:not([size]):not([multiple]) {
 }
 
 .btn-tier{
-   
     border: 1.5px solid #a3a3a3;
     border-radius: 1px;
     position: center;
@@ -2449,22 +2449,21 @@ select.form-control-lg:not([size]):not([multiple]) {
     letter-spacing: 1px;
     display: inline-block;
     padding: 0 20px;
-    text-align: center;
     background-size: 200% auto;
     color: #fff;
     box-shadow: 0 3ox 20px rgba(0, 0, 0, 0.1);
     border-radius: 100px;
     background-image: linear-gradient(to right, #000000 0%,#000000 80%);
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-    margin-top:40px;
-    margin-left: 210px
+    margin-top:15px;
+    margin-bottom:25px;
+    text-align: center;
+    margin-left: 208px; 
 }
 
 .btn-tier:hover {
-    background-image: linear-gradient(to right, #fd46ee 0%,#5425d4 70%);
-    border: 1.5px solid white;
-    color: white;
+    color: #fff;
+    background: #7450fe;
+    border-color: #7450fe;
 }
 
 .btn {

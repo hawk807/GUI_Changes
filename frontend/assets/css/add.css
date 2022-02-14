@@ -146,11 +146,6 @@ h1 {
         background-image: linear-gradient(to right, #341868 0%,#180b38 70%);
     }
 
-    .form-control{
-        background-color:#0e0824;
-        border: 1.5px solid rgb(41, 41, 41);
-    }
-
     button:hover{
         background-image: linear-gradient(to right, #ff43ef 0%,#8154fd 70%);
     }

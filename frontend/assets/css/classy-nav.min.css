@@ -1,9 +1,9 @@
 *,ol,ul{margin:0}.classynav ul li.megamenu-item>a:after,.icon-down-arrow:before{content:"\e900"}*{padding:0}body{font-family:Roboto,sans-serif;overflow-x:hidden}ol li,ul li{list-style:none}img{height:auto;max-width:100%}.bg-img{background-position:center center;background-size:cover;background-repeat:no-repeat}.bg-transparent{background-color:transparent!important}.pr12{padding-right:12px!important}.classy-nav-container{position:relative;z-index:100;background-color:#fff}.classy-nav-container *{box-sizing:border-box}.classy-nav-container a{-webkit-transition-duration:.5s;transition-duration:.5s;text-decoration:none;outline:0;font-size:14px;font-weight:400;color:#232323;display:inline-block}.classy-nav-container a:focus,.classy-nav-container a:hover{-webkit-transition-duration:.5s;transition-duration:.5s;text-decoration:none;outline:0;font-size:14px;font-weight:400;color:#1abc9c}.classy-navbar .nav-brand,.classy-navbar 
 
 .nav-brand.classy-navbar{
-    width: 300px;
+    width: 250px;
     height: 300px;
-    margin-top:250px;
+    margin-top:270px;
 
   
 }

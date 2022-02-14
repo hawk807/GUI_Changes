@@ -1,69 +1,42 @@
-const electron = require('electron')
-const ipc = electron.ipcRenderer
-const data = require("../app/db/configure.json")
-const creds = require("../app/db/credentials.json")
-const { ERCABI } = require('../app/abi')
-const target = data.target
-const wbnb = data.pairtoken
-const { default: axios } = require('axios')
-const qs = require('qs')
-//const { getQuote } = require('../fetch.js')
-let cooldown = false;
 
+var chartElement = document.createElement('div');
 
+//https://api.0x.org/swap/v1/quote?buyToken=DAI&sellToken=0xf4d2888d29d722226fafa5d9b24f9164c092421e&sellAmount=50000000000000000
 
-let x = 300;
-x = document.getElementById("user_balance")
-
-const notifyBtn = document.getElementById('notifyBtn');
-notifyBtn.addEventListener('click', function (event) {
-    ipc.send('user-config')
-})
-
-const credButton = document.getElementById('credButton');
-credButton.addEventListener('click', function (event) {
-    ipc.send('user-credentials')
-})
-
-
-const withdrawBtn = document.getElementById('withdrawBtn');
-withdrawBtn.addEventListener('click', function (event) {
-    ipc.send('withdraw-request')
-})
-
-const quickBuy = document.getElementById('fastBuy');
-quickBuy.addEventListener('click', function (event) {
-    if (!cooldown) {
-        ipc.send('fast-buy-request')
+async function getUser() {
+    if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask is installed!');
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        address = accounts[0];
     }
-})
+    else {
+        alert('In order to be able to use Blockinetics services, you need to have metamask installed')
+    }
+}
+getUser()
+
+
+// TRADE DATA UPDATES
+async function updateTradeData() {
+    try {
+        let { tokenASymbol, tokenBSymbol, tokenA_Address, tokenB_Address } = await fetch(`http://localhost:5000/web3/updateTradeData?sender="${address}"`)
+        tokenASymbol != undefined ? document.getElementById("wbnb").innerHTML = tokenASymbol.toString() : console.warn('TokenA: Error Fetching name')
+        tokenBSymbol != undefined ? document.getElementById("target").innerHTML = tokenBSymbol.toString() : console.warn('TokenB: Error Fetching name')
+        document.getElementById("addressA").innerHTML = `${tokenBSymbol}: ${tokenB_Address.slice(0, 5)}...${tokenB_Address.slice(tokenB_Address.length - 4, tokenB_Address.length)}`
+        document.getElementById("addressB").innerHTML = `${tokenASymbol}: ${tokenA_Address.slice(0, 5)}...${tokenA_Address.slice(tokenA_Address.length - 4, tokenA_Address.length)}`
+
+        // Chart reset to get rid of the demo chart data
+    } catch (error) {
+        console.log(error)
+
+    }
+}
 
 
 
-const transferBtn = document.getElementById('transferBtn');
-transferBtn.addEventListener('click', function (event) {
-    ipc.send('transfer-window')
-})
-
-const openSellBtn = document.getElementById('sellwinBtn');
-openSellBtn.addEventListener('click', function (event) {
-    ipc.send('sell-window')
-})
-
-/*
-const sellBtn = document.getElementById('sellBtn');
-sellBtn.addEventListener('click', function (event) {
-    ipc.send('sell-request')
-})
-*/
 
 
-const emodeBtn = document.getElementById('emodeBtn');
-emodeBtn.addEventListener('click', function (event) {
-    ipc.send('start-emode')
-})
-
-
+// CHART UPDATES
 
 let chartopened = false;
 const chartBtn = document.getElementById("chartBtn");
@@ -77,18 +50,20 @@ chartBtn.addEventListener('click', function () {
     }
 })
 
-
 async function makeCandleStick(lastPrice) {
     try {
-
         let timer = 0;
         let data;
         let open;
         let close;
         let high;
         let low;
+
+        let address;
         let priceInterval = setInterval(async () => {
             console.log('started collecting data')
+            if (!chartopened) clearInterval(priceInterval)
+            /*
             const params = {
                 buyToken: 'DAI',
                 sellToken: target,
@@ -98,20 +73,39 @@ async function makeCandleStick(lastPrice) {
             let res = await axios.get(`${URL}${qs.stringify(params)}`)
             console.log(res.data.price)
             data = res.data.price
+            */
+            // important user can only have one configuration at the time, whenever he presses configure, the old entry needs to be deleted from the database
+
+
+
+            /*
+let resulttest = await fetch(`http://localhost:5000/tierOne/`, { //?sender="${address}"
+                method: 'GET'
+            })
+            */
+
+            let { tokenA, tokenB } = await fetch(`http://localhost:5000/tierOne/`, { //?sender="${address}"
+                method: 'GET'
+            })
+
+            console.log(resulttest)
+            const QS = `https://api.0x.org/swap/v1/quote?buyToken=DAI&sellToken=${tokenA}&sellAmount=50000000000000000`
+            let res = await fetch(QS)
+            console.log(res.data.price)
+            data = res.data.price
 
             if (timer == 0 && lastPrice == undefined) { open = data }
             else if (lastPrice != undefined) {
                 open = lastPrice
             }
             timer += 1000
-
             if (timer == 6000) {
                 clearInterval(priceInterval);
-                console.log('stopped collecting')
+                console.log('stopped collecting data')
                 close = data
                 if (low == undefined) low = high
                 let candleStickObj = {
-                    time: Date.now(),
+                    time: new Date(),
                     open: open,
                     high: high,
                     low: low,
@@ -151,96 +145,13 @@ function getMinMax(data) {
     }
 }
 
-async function updateTradeData() {
-    if (creds.RPC != '') {
-
-        try {
-            const Web3 = require('web3')
-            const fetchWeb3 = new Web3(creds.RPC.toString());
-            console.log(creds.RPC.toString())
-            let tokenAContract = await new fetchWeb3.eth.Contract(ERCABI, wbnb);
-            let tokenA = await tokenAContract.methods.symbol().call({ from: creds.address })
-
-            let tokenBContract = await new fetchWeb3.eth.Contract(ERCABI, target);
-            let tokenB = await tokenBContract.methods.symbol().call()
-
-            tokenA != undefined ? document.getElementById("wbnb").innerHTML = tokenA.toString() : console.warn('TokenA: Error Fetching name')
-            tokenB != undefined ? document.getElementById("target").innerHTML = tokenB.toString() : console.warn('TokenB: Error Fetching name')
-            document.getElementById("addressA").innerHTML = `${tokenA}: ${wbnb.slice(0, 5)}...${wbnb.slice(wbnb.length - 4, wbnb.length)}`
-            document.getElementById("addressB").innerHTML = `${tokenB}: ${target.slice(0, 5)}...${target.slice(target.length - 4, target.length)}`
-        } catch (error) {
-            console.log(error)
-
-        }
-    }
-    else {
-        return
-    }
-}
-
-
-
-// Importing the Notification Module from Electron,
-// Since it is a Part of the Main Process, Using the
-// Remote Module to Import it in Renderer Process
-
-
-const options = {
-    title: 'Custom Notification',
-    subtitle: 'Subtitle of the Notification',
-    body: 'Body of Custom Notification',
-    silent: true,
-    hasReply: true,
-    timeoutType: 'never',
-    replyPlaceholder: 'Reply Here',
-    urgency: 'critical',
-    closeButtonText: 'Close Button',
-    actions: [{
-        type: 'button',
-        text: 'Show Button'
-    }]
-}
-
-// Instantiating a new Notifications Object
-// with custom Options
-//const customNotification = new Notification(options);
-
-
-// Instance Events for the new Notification Object
-// send a start signal - to the datafetcher
-// in the main process send a signal to chart js and from there initiate the data use the datafetcher file or start an ipc process there an listen to stdout
-
-const MempoolModeBtn = document.getElementById('MempoolModeBtn');
-MempoolModeBtn.addEventListener('click', function (event) {
-    ipc.send('start-memmode')
-})
-
-ipc.on('memStats', (event, arg) => {
-
-    document.getElementById('console').innerHTML = arg.toString()
-    if (!arg.includes("No")) {
-        new Notification(arg.toString());
-    }
-
-    //console.log(arg)
-})
-
-ipc.on('emodeLogs', (event, arg) => {
-    document.getElementById('emode_console').innerHTML = arg.toString()
-})
-
-// integrating the chart
-
-
-
-
-var chartElement = document.createElement('div');
-
 var chart = LightweightCharts.createChart(chartElement, {
-    width: 1000,
+    width: 900,
     height: 300,
     rightPriceScale: {
-        borderVisible: false,
+        borderVisible: true,
+        borderColor: 'rgba(197, 203, 206, 0.8)',
+
     },
     timeScale: {
         rightOffset: 12,
@@ -248,18 +159,19 @@ var chart = LightweightCharts.createChart(chartElement, {
         fixLeftEdge: false,
         lockVisibleTimeRangeOnResize: true,
         rightBarStaysOnScroll: true,
-        borderVisible: false,
-        borderColor: '#fff000',
+        borderVisible: true,
+        borderColor: 'rgba(197, 203, 206, 0.8)',
         visible: true,
         timeVisible: true,
         secondsVisible: true,
         tickMarkFormatter: (time, tickMarkType, locale) => {
-            console.log(time, tickMarkType, locale);
+            //console.log(time, tickMarkType, locale);
             const year = LightweightCharts.isBusinessDay(time) ? time.year : new Date(time * 1000).getUTCFullYear();
             return String(year);
         },
     },
 });
+
 
 
 let conditions = [
@@ -288,23 +200,21 @@ document.querySelectorAll('.bt_3').forEach(function (e) {
 });
 
 
-//document.getElementById("chart")
 document.getElementById("chart").appendChild(chartElement);
-//document.getElementById("chart").appendChild(switcherElement);
 
 var candleSeries = chart.addCandlestickSeries({
-    upColor: 'rgba(255, 144, 0, 1)',
-    downColor: '#000',
-    borderDownColor: 'rgba(255, 144, 0, 1)',
-    borderUpColor: 'rgba(255, 144, 0, 1)',
-    wickDownColor: 'rgba(255, 144, 0, 1)',
-    wickUpColor: 'rgba(255, 144, 0, 1)',
+    upColor: 'rgba(1,102,192,255)',
+    downColor: '#aa009c',
+    borderDownColor: 'rgba(186,19,166,255)',
+    borderUpColor: 'rgba(1,102,192,255)',
+    wickDownColor: 'rgba(186,19,166,255)',
+    wickUpColor: 'rgba(1,102,192,255)',
 });
 
 var darkTheme = {
     chart: {
         layout: {
-            backgroundColor: '#7835ff',
+            backgroundColor: '#0d111d',
             lineColor: '#2B2B43',
             textColor: '#D9D9D9',
         },
@@ -316,10 +226,10 @@ var darkTheme = {
         },
         grid: {
             vertLines: {
-                color: '#2B2B43',
+                color: '#4a4f64',
             },
             horzLines: {
-                color: '#363C4E',
+                color: '#4a4f64',
             },
         },
     },
@@ -343,9 +253,6 @@ function syncToTheme(theme) {
 
 
 
-
-
-
 var consoleElement = document.createElement('div');
 
 
@@ -353,7 +260,8 @@ var consoleElement = document.createElement('div');
 syncToTheme('Dark');
 
 
-/*
+
+
 candleSeries.setData([
     { time: '2018-10-19', open: 180.34, high: 180.99, low: 178.57, close: 179.85 },
     { time: '2018-10-22', open: 180.82, high: 181.40, low: 177.56, close: 178.75 },
@@ -505,27 +413,3 @@ candleSeries.setData([
     { time: '2019-05-23', open: 188.45, high: 192.54, low: 186.27, close: 192.00 },
     { time: '2019-05-24', open: 192.54, high: 193.86, low: 190.41, close: 193.59 },
 ]);
-
-*/
-/*
-
-areaSeries.setData([
-    { time: 1642081041367, value: 0.18050271807746152 },
-    { time: 1642081044074, value: 0.18050271807746152 },
-    { time: 1642081046857, value: 0.18049070010575308 },
-    { time: 1642081049861, value: 0.1804834572305021 },
-    { time: 1642081052873, value: 0.1804834572305021 },
-    { time: 1642081055853, value: 0.18048626004236876 },
-    { time: 1642081058883, value: 0.1804861905799954 },
-    { time: 1642081061891, value: 0.1804923142434569 },
-    { time: 1642081064886, value: 0.18049231759637963 },
-    { time: 1642081067850, value: 0.18049121032949916 },
-    { time: 1642081070866, value: 0.18049021414971253 },
-    { time: 1642081074113, value: 0.18049121032949916 },
-    { time: 1642081077495, value: 0.18049796611587232 },
-    { time: 1642081080317, value: 0.1805083578884378 }
-
-]);
-
-*/
-

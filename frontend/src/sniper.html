@@ -11,37 +11,28 @@
 		integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 	<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/add.css">
+
 	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
+<body onload="getUser()">
 	<nav class="navbar navbar-expand-lg  ">
 		<a class="navbar-brand" href="./index.html"> <img src="./../static/images/logo.png"
-				 class="d-inline-block align-top" ></a>
-			<ul class="navbar-nav">
-				<!-- <li class="nav-item"><a class="nav-link" href="./index/#home">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="./index/#about">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="./index/#services">Services</a></li>
-				<li class="nav-item"><a class="nav-link" href="./index/#roadmap">Roadmap</a></li>
-				<li class="nav-item"><a class="nav-link" href="./index/#team">Team</a></li>
-				<li class="nav-item"><a class="nav-link" href="./index/#contact">Contact</a></li> -->
-				<li class="nav-item">
-					<a class="nav-link" href="./sniper.html">Sniper V1</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./credentials.html">Credentials</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./sell.html">Sell</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./transfer.html">Transfer</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./add.html">Add</a>
-				</li>
-			</ul>
+				class="d-inline-block align-top"></a>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="./sniper.html">Sniper V1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./sell.html">Sell</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./transfer.html">Transfer</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./add.html">Add</a>
+			</li>
+		</ul>
 		</div>
 	</nav>
 	<div class="title1">
@@ -49,14 +40,14 @@
 			Sniper V1
 		</p>
 	</div>
-	<div class="container">
+	<div class="container-sniper">
 		<div class="form-group">
-			<div class="container">
+			<div class="container-sniper">
 				<div class="bt_credentials">
 				</div>
 			</div>
 		</div>
-		<div class="container"></div>
+		<div class="container-sniper"></div>
 		<div class="col-sm-12">
 			<div class="card">
 				<div class="card-header">
@@ -65,9 +56,9 @@
 				<div class="card-body">
 					<div class="balance">balance: 0 ETH </div>
 					<div class="exchange-buttons-container">
+						<button id="credButton" class="bt_g">Create Wallet</button>
 						<button id="withdrawBtn" class="bt_g">Withdraw</button>
 						<button id="transferBtn" class="bt_g">Transfer</button>
-						<button id="credButton" class="bt_g">Credentials</button>
 					</div>
 				</div>
 			</div>
@@ -75,7 +66,7 @@
 	</div>
 	</div>
 	<br>
-	<div class="container">
+	<div class="container-sniper">
 		<div class="">
 			<div class="form-group">
 				<div class="col-sm-12">
@@ -160,7 +151,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
-	<script src="index.js"></script>
+	<script src="sniper.js"></script>
 </body>
 
 </html>
