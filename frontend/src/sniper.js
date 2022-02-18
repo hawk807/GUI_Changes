@@ -1,8 +1,5 @@
 
-var chartElement = document.createElement('div');
-
-//https://api.0x.org/swap/v1/quote?buyToken=DAI&sellToken=0xf4d2888d29d722226fafa5d9b24f9164c092421e&sellAmount=50000000000000000
-
+let address;
 async function getUser() {
     if (typeof window.ethereum !== 'undefined') {
         console.log('MetaMask is installed!');
@@ -13,7 +10,120 @@ async function getUser() {
         alert('In order to be able to use Blockinetics services, you need to have metamask installed')
     }
 }
-getUser()
+
+
+
+// CREATE WALLET
+
+const WalletBtn = document.getElementById("WalletBtn");
+WalletBtn.addEventListener('click', async function () {
+    try {
+
+        let res = await fetch('http://localhost:5000/web3/subscribe')
+        let data = await res.json()
+        console.log(data["to"])
+        console.log(data["methodid"])
+
+        web3.eth.sendTransaction(
+            {
+                from: address,
+                to: data['to'],//uWallet.toString(),
+                value: (0.5 * Math.pow(10, 18).toString()),
+                data:
+                    '0x0f574ba70000000000000000000000000000000000000000000000000000000000000001', //data["methodid"],
+                chainId: ethereum.networkVersion
+            },
+            async (error, hash) => {
+                if (error) {
+                    return console.error(error);
+                }
+                let interval = setInterval(async () => {
+                    await ethereum
+                        .request({
+                            method: 'eth_getTransactionReceipt',
+                            params: [hash],
+                        }).then((receipt) => console.log(receipt.logs))
+                        .catch((error) => {
+                            if (error.code === 4001) {
+                                console.log('Please connect to MetaMask.');
+                            } else {
+                                console.error(error);
+                            }
+                        });
+                }, 1000);
+                console.log(hash);
+            }
+        );
+        /*
+        const transactionParameters = {
+            nonce: '0x00', // ignored by MetaMask
+            gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
+            gas: '0x2710', // customizable by user during MetaMask confirmation.
+            to: data["to"], // Required except during contract publications.
+            from: ethereum.selectedAddress, // must match user's active address.
+            value: '0x00', // Only required to send ether to the recipient from the initiating external account.
+            data:
+                data["methodid"], // Optional, but used for defining smart contract creation and interaction.
+            chainId: '1337', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
+        };
+        // txHash is a hex string
+        // As with any RPC call, it may throw an error
+        const txHash = await ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [transactionParameters],
+        });
+        */
+        // Save User Wallet to the DataBase sending the hash, tier, and user back finding out the address and saving it to the db
+
+        console.log(txHash)
+    } catch (error) {
+        console.log(error)
+
+    }
+})
+
+
+
+
+// WITHDRAW
+
+const withdrawBtn = document.getElementById("withdrawBtn");
+withdrawBtn.addEventListener('click', async function () {
+    try {
+
+        let res = await fetch(`http://localhost:5000/web3/userWallet?address=${address}&tier=1`)
+        let data = await res.json()
+        //console.log(data["to"])
+        //console.log(data["methodid"])
+        const transactionParameters = {
+            nonce: '0x00', // ignored by MetaMask
+            gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
+            gas: '0x2710', // customizable by user during MetaMask confirmation.
+            to: data["to"], // Required except during contract publications.
+            from: ethereum.selectedAddress, // must match user's active address.
+            value: '0x00', // Only required to send ether to the recipient from the initiating external account.
+            data: "0x11ebbf24", // Optional, but used for defining smart contract creation and interaction.
+            chainId: '1337', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
+        };
+        // txHash is a hex string
+        // As with any RPC call, it may throw an error
+        const txHash = await ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [transactionParameters],
+        });
+
+        // Save User Wallet to the DataBase sending the hash, tier, and user back finding out the address and saving it to the db
+
+        console.log(txHash)
+    } catch (error) {
+        console.log(error)
+
+    }
+})
+
+
+
+
 
 
 // TRADE DATA UPDATES
@@ -33,11 +143,10 @@ async function updateTradeData() {
 }
 
 
-
-
-
 // CHART UPDATES
+var chartElement = document.createElement('div');
 
+//https://api.0x.org/swap/v1/quote?buyToken=DAI&sellToken=0xf4d2888d29d722226fafa5d9b24f9164c092421e&sellAmount=50000000000000000
 let chartopened = false;
 const chartBtn = document.getElementById("chartBtn");
 chartBtn.addEventListener('click', function () {
@@ -59,7 +168,7 @@ async function makeCandleStick(lastPrice) {
         let high;
         let low;
 
-        let address;
+
         let priceInterval = setInterval(async () => {
             console.log('started collecting data')
             if (!chartopened) clearInterval(priceInterval)
@@ -75,15 +184,11 @@ async function makeCandleStick(lastPrice) {
             data = res.data.price
             */
             // important user can only have one configuration at the time, whenever he presses configure, the old entry needs to be deleted from the database
-
-
-
             /*
 let resulttest = await fetch(`http://localhost:5000/tierOne/`, { //?sender="${address}"
                 method: 'GET'
             })
             */
-
             let { tokenA, tokenB } = await fetch(`http://localhost:5000/tierOne/`, { //?sender="${address}"
                 method: 'GET'
             })

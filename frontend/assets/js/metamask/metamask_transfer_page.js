@@ -1,5 +1,7 @@
 
 
+/*
+
 const transferBtn = document.getElementById('transferBtn');
 transferBtn.addEventListener('click', async function (event) {
     let address;
@@ -38,3 +40,5 @@ transferBtn.addEventListener('click', async function (event) {
     // ipc.send('transfer-request', message)
 
 })
+
+*/

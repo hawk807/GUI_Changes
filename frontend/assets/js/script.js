@@ -121,12 +121,7 @@
     })
 
     // :: ScrollUp Active Code
-    if ($.fn.scrollUp) {
-        $.scrollUp({
-            scrollSpeed: 1500,
-            scrollText: 'Scroll Top'
-        });
-    }
+  
 
     // :: onePageNav Active Code
     if ($.fn.onePageNav) {

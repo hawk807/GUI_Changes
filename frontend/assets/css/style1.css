@@ -69,8 +69,23 @@
     padding: 0;
 }
 
+.alpha-text{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
 
+}
 
+.contact-title{
+    margin-top: 120px;
+}
+
+.alpha-title{
+    text-align: center
+}
+.one{
+    margin-top:90px
+}
 
 
 .wow {
@@ -112,22 +127,41 @@ ol {
 
 .step{
     font-size: 25px;
-    color: rgb(145, 145, 145);
+    color: rgb(70, 70, 70);
 }
 
-.tier-package{
-    margin-top: 50px;
-    font-size: 40px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    font-style: bold;
-    margin-bottom:15px;
+.card{
+    border-radius: 15px;
+    background: linear-gradient(to right, #000000 0%, #000000 100%);
+    border: 2px solid #242424;;
+    height: 590px;
+    margin:20px
+}
+
+
+.card-body{
+    background: linear-gradient(to right, #000000 0%, #140827 100%);
+    border-radius: 15px;
+}
+
+.card-title4{
+    color:#ffffff;
+    font-size: 25px;
     text-align: center
 }
 
+.card-title{
+    color:rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    text-align: center
+}
+
+
+
 .hero-content {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 280px;
     background: rgba(72, 52, 212, 0.95);
     background: -webkit-linear-gradient(to right, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
     background: -webkit-linear-gradient(left, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
@@ -140,25 +174,29 @@ ol {
 
 .list{
     font-family: 'Poppins', sans-serif;
-    text-align:center;
     font-size:14px;
-    
-   
+    margin-left:13px;
 }
 
 .pricing-title{
     font-size:80px
 }
-  
+
+.tier-package{
+    margin-top: 50px;
+    font-size: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    margin-bottom:15px;
+}
+    
 .tier-title{
     font-family: 'Poppins', sans-serif;
-    font-size: 45px;
-    font-weight: 510;
+    font-size: 30px;
+    font-weight: 500;
     position: center;
     text-align: center;
-    
-  
-    
 }
 
 h1,
@@ -174,13 +212,31 @@ h6 {
 }
 
 
-
 .img-sniper {
-   
-    color: rgb(121, 121, 121);
-    border-radius: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width:550px
+}
 
-  
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+.token-info .info-wrapper {
+    border: 1.5px solid #242424;
+    border-radius: 25px;
+    padding: 19px 36px;
+    padding-left: 65px;
+    background-color: #0d003b;
+    width: 100%;
+    position: relative;
+    -ms-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 a,
@@ -203,21 +259,70 @@ p {
     font-size: 15px;
 }
 
-img {
+.sniper1{
+    width:260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px
+}
+
+.aim{
+    width:56px;
+    vertical-align: top;
+    margin-left:5px;
+    margin-top: 4.9px;
+}
+
+.dream-btn {
+    border: 1.5px solid #ffffff;
+    border-radius: 1.5px;
+    position: relative;
+    z-index: 1;
+    min-width: 160px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    background-size: 200% auto;
+    color: #fff;
+    border-radius: 100px;
+    background-image: #50cdfe;
+    -webkit-transition: all 500ms;
+    transition: all 200ms;
+    margin-top:7px
+}
+.dream-btn:hover {
+    color: #fff;
+    background: #7450fe;
+    border-color: #7450fe;
+}
+
+
+
+.img {
     max-width: 100%;
     height: auto;
 }
 
 .about-image{
-    width: 500px;
+    width: 470px;
+    margin-bottom: 10px;
+}
+
+.ask-image{
+    width: 400px;
    
 }
  
 .sniper-image {
-    margin-left: 35px;
-    margin-top: 100px;
+    margin-left: 13px;
+    margin-top: 50px;
     
-    width: 500px;
+    width: 650px;
     display:flex;
     border:flex;
 
@@ -314,6 +419,7 @@ ol {
     -webkit-animation: dreamrotate 2700ms linear infinite;
     animation: dreamrotate 2700ms linear infinite
 }
+
 
 #dream-load:after {
     content: "";
@@ -597,6 +703,7 @@ ol {
     position: relative;
     z-index: 1;
     margin-bottom: 80px;
+    text-align:center;
 }
 
 .section-heading h2 {
@@ -690,13 +797,6 @@ ol {
     height: 1000px;
 }
 
-.dream-dots {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 30px;
-}
-
 .dream-dots span {
     width: 8px;
     height: 8px;
@@ -738,7 +838,6 @@ ol {
     z-index: 1;
     color: #fff;
     font-size: 12px !important;
-
     line-height: 33px;
     padding: 0 20px;
     min-width: 100px;
@@ -749,6 +848,38 @@ ol {
     border-color: #7450fe;
 }
 
+.tooltip {
+    position:relative; /* making the .tooltip span a container for the tooltip text */
+    border-bottom:1px dashed #000; /* little indicater to indicate it's hoverable */
+  }
+
+  .tooltip:before {
+    content: attr(data-text); /* here's the magic */
+    position:absolute;
+    
+    /* vertically center */
+    top:50%;
+    transform:translateY(-50%);
+    
+    /* move to right */
+    left:100%;
+    margin-left:15px; /* and add a small left margin */
+    
+    /* basic styles */
+    width:200px;
+    padding:10px;
+    border-radius:10px;
+    background:#000;
+    color: #fff;
+    text-align:center;
+  
+    display:none; /* hide by default */
+  }
+
+  .tooltip:hover:before {
+    display:block;
+  }
+
 .login-btn:hover,
 .login-btn:focus {
     color: #fff;
@@ -758,35 +889,6 @@ ol {
 
 .img-responsive{
     width: 1100px; 
-}
-.dream-btn {
-
-    border: 1.5px solid #ffffff;
-    border-radius: 1.5px;
-    position: relative;
-    z-index: 1;
-    min-width: 160px;
-    height: 48px;
-    line-height: 48px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 0 20px;
-    text-align: center;
-    background-size: 200% auto;
-    color: #fff;
-    border-radius: 100px;
-    background-image: #7450fe;
-    -webkit-transition: all 500ms;
-    transition: all 200ms;
-    margin-bottom: 40px;
-}
-
-.dream-btn:hover {
-    color: #fff;
-    background: #7450fe;
-    border-color: #7450fe;
 }
 
 
@@ -1688,19 +1790,6 @@ p.artficial:before{
     display: -ms-flexbox;
     display: flex;
 }
-.token-info .info-wrapper {
-    border: 1px solid #4834d4;
-    border-radius: 10px;
-    padding: 19px 36px;
-    padding-left: 65px;
-    background-color: #0d003b;
-    width: 100%;
-    position: relative;
-    -ms-flex: 1;
-    flex: 1;
-    display: -ms-flexbox;
-    display: flex;
-}
 .info-wrapper .token-icon {
     left: 20px;
     width: 38px;
@@ -1726,7 +1815,7 @@ p.artficial:before{
     position: relative;
     z-index: 1;
     padding: 30px 20px 15px;
-    border: 1px solid #7451FE;
+    border: 1.5px solid #242424;
     background: rgba(0,0,0,0.1);
     border-radius: 0 20px;
     margin-bottom: 30px;
@@ -1796,9 +1885,9 @@ p.artficial:before{
     height: 4px;
     background-color:  #4834d4;
     position: relative;
-    -webkit-box-shadow: 0 0 6px 1px #7451FE;
-    -moz-box-shadow: 0 0 6px 1px #7451FE;
-    box-shadow: 0 0 6px 1px #7451FE;
+    -webkit-box-shadow: 0 0 6px 1px=#4834D4;
+    -moz-box-shadow: 0 0 6px 1px #4834D4;
+    box-shadow: 0 0 6px 1px #4834D4;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px
@@ -1834,9 +1923,10 @@ p.artficial:before{
     text-align: center
 }
 
+/* bullets */ 
 #section_5-slider-circle .data_cir-content p {
     font-size: 13px;
-    color: #f837ff;
+    color: #7451FE;
     line-height: 2
 }
 
@@ -1933,19 +2023,19 @@ p.artficial:before{
 }
 
 #section_5-slider-circle .data_cir:nth-child(2n) .data_cir-content ul::before {
-    border-top: 1px solid #7451FE;
+    border-top: 1px solid #663fff;
     margin-top: -46px
 }
 
 #section_5-slider-circle .data_cir:nth-child(2n+1) .data_cir-content ul::before {
-    border-bottom: 1px solid #7451FE;
+    border-bottom: 1px solid #6f4bff;
     margin-top: 10px
 }
 
 #section_5-slider-circle .data_cir .data_cir-content ul li {
     padding-left: 5px;
     list-style: disc;
-    color: #9400F3;
+    color: #7451FE;
 }
 
 #section_5-slider-circle .data_cir .data_cir-content ul li span {
@@ -2675,11 +2765,13 @@ p.artficial:before{
 
 .subscribe-wrapper {
     padding: 60px;
+    width: 700px;
     overflow: hidden;
     box-sizing: border-box;
+    border-top: 1.5px solid #21005e;
     border-radius: 20px;
-    background: #4834d4;
-    box-shadow: 0 10px 80px rgba(15,62,153,.3);
+    background: #000000;
+    box-shadow: 0 10px 80px rgba(90, 30, 231, 0.349);
 }
 .telegram-text{
     font-size: 20px;
@@ -2725,6 +2817,7 @@ p.artficial:before{
 }
 .button {
     position: relative;
+    border: 1.5px solid rgb(255, 255, 255);
     z-index: 0;
     overflow: hidden;
     display: inline-block;
@@ -2732,9 +2825,8 @@ p.artficial:before{
     font-size: 16px;
     z-index: 2;
     line-height: 1.25;
-    color: #7451FE;
-    background: #fff;
-    border: 0 solid;
+    color: #ffffff;
+    background: #0084ff;
     border-radius: 40px;
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -3886,9 +3978,4 @@ body.light-version {
 }
 .preview-demo:hover{
     color: #333
-}
-
-.token-allocation {
-    width: 430px;
-    margin-left: 57px;
 }
