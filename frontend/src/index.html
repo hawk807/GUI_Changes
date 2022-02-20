@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
     <!-- Favicon -->
     <link rel="icon" href="./../assets/img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="./../assets/css/style1.css">
+    <link rel="stylesheet" href="preload.css">
 
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="./../assets/css/responsive.css">
+    
     <style>
         body {
             position: absolute;
@@ -25,12 +26,40 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preload-content">
-            <div id="dream-load"></div>
-        </div>
-    </div>
+    <div id="preloader"> 
+
+    	<div id="loader">	   
+    	<div class="sk-cube-grid">
+  <div class="sk-cube sk-cube1"></div>
+  <div class="sk-cube sk-cube2"></div>
+  <div class="sk-cube sk-cube3"></div>
+  <div class="sk-cube sk-cube4"></div>
+  <div class="sk-cube sk-cube5"></div>
+  <div class="sk-cube sk-cube6"></div>
+  <div class="sk-cube sk-cube7"></div>
+  <div class="sk-cube sk-cube8"></div>
+  <div class="sk-cube sk-cube9"></div>
+</div>
+</div>
+</div> 
+   
+
+<!-- jQuery Plugin -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+    //<![CDATA[
+    function showSite(){
+          $('#loader').fadeOut(); // will first fade out the loading animation 
+          $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+          $('body').delay(350).css({'overflow':'visible'});
+    }
+        $(window).on('load', function() { // makes sure the whole site is loaded 
+        setTimeout(function(){ showSite() }, 2000);
+        })
+    //]]>
+</script>
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area wow fadeInDown" data-wow-delay="0.2s">
@@ -127,12 +156,12 @@
             </div>
             <h1 class="alpha-title fadeInUp" data-wow-delay="0.3s">Alphalytics</h1>
                     <div class="alpha-text fadeInUp" data-wow-delay="0.5s">
-                        Designed for high speed, low latency sniping, query the mempool without setting up your own server. 
+                        Designed for, high speed, low latency, no server sniping. 
                     </div>
 
             <img  src="./../assets/img/core-img/alpha3.png" class="center ">
-            <div class="growing-company text-center mt-30 wow fadeInUp" data-wow-delay="0.8s">
-                <p>Already growing <span class="counter">5236</span> accounts</p>
+            <div class="growing-company text-center mt-30 wow fadeInUp" data-wow-delay="0.3s">
+                <p>Already growing <span class="counter">6495</span> accounts</p>
             </div>
         </section>
         <section section="about-us-area section-padding-0-100 clearfix" id="about">
@@ -159,8 +188,8 @@
                             <p class="wow fadeInUp" data-wow-delay="0.4s">Here at Blockinetics we send our engineers
                                 into the field to work directly with our customers,
                                 deploying our products, integrating their data, optimizing their workflows, and
-                                producing operational results in weeks. We help customers get the most out of our
-                                products and engineering expertise.</p>
+                                producing operational results in days. We help customers get the most out of our
+                                products and web3 engineering expertise.</p>
                             <p class="wow fadeInUp" data-wow-delay="0.5s">Our trading features are designed for
                                 individual use connected straight to your wallet where our systems do the rest for you.
                                 We help provide you with the
@@ -202,9 +231,8 @@
 
                                 <p class="wow fadeInUp" data-wow-delay="0.4s">
 
-                                We provide ANTI-TAX, BLACKLIST PROTECTION, MEMEPOOL SNIPING and the ability to PRESIGN Metamask transactions 
-                                so that you don't need to sign per transaction ever again and instead snipe instantaniously. In addition our software currently works against MAX BUYS 
-                                overall providing you true edge in such a competitve market. 
+                                We provide ANTI-TAX, BLACKLIST PROTECTION and MEMEPOOL SNIPING (see our below FAQ for further details). In addition our software currently works against MAX BUYS 
+                                overall providing you true edge in such a competitve market when speed is a priority. 
 
                                 <p class="wow fadeInUp" data-wow-delay="0.4s">
                           
@@ -305,6 +333,7 @@
                                     <li>Blacklist Protection</li>   
                                     <li>Mempool sniping</li> 
                                     <li>2% buying fee</li>
+                                    <li>Alphaytics</li>
                                 </ol>
                             </div>    
                             </div>
@@ -328,12 +357,12 @@
                                             <li>Anti – Tax</li>                                           
                                             <li>Presigning of transactions</li>
                                             <li>Blacklist Protection</li>
-                                            <li>Mempool sniping</li>
+                                            <li>Mempool sniping</li>                                           
+                                            <li>1% buying fee</li>
+                                            <li>Alphalytics</li>
                                             <li>Works against max buys</li>
                                             <li>Pre-sale allocation</li>
-                                            <li>1-1 chatroom with Engineers</li>
-                                            <li>All models unlocked</li>
-                                            <li>1% buying fee</li>
+                                            <li>1-1 chatroom with Engineers</li>                          
                                         </ol>
                                     </div>                                   
                             </div>
@@ -464,26 +493,68 @@
                                     <!-- Single FAQ Area -->
                                     <dt class="wave wow fadeInUp" data-wow-delay="0.2s">What does this “Sniper V1” do and how does it work?</dt>
                                     <dd class="wow fadeInUp" data-wow-delay="0.3s">
-                                        <p>The bot allows you to buy any newly added token instantaniously (up to zero seconds from the time of the liquidity transaction show up in the mempool). It is called 
+                                        <p> The bot allows you to buy any newly added token instantaniously (up to zero seconds from the time of the liquidity transaction show up in the mempool). It is called 
                                             “frontrunning”. The bot works by connecting to the blockchain network, 
                                             scanning for all mempool / pending transactions, finding and matching the liquidity add transaction of the token 
-                                            you are trying to snipe and then placing the buy order in the same block.</p>
+                                            you are trying to snipe and then placing the buy order in the same block. 
+                                            <div> 1. Choose subscription or click "Create Wallet" 
+                                            <div> 2. Connect to metamask
+                                            </div> 3. Configure the token you want sniping
+                                            <div> 4. Execute
                                     </dd>
-                                    <!-- Single FAQ Area -->
+                                    <dt class="wave wow fadeInUp" data-wow-delay="0.5s">What is 'anti-tax', 'blacklist protection', 'mempool' and 'alphalytics' ?
+                                    </dt>
+                                    <dd>
+                                        <p>
+                                            <p>
+                                                <span style="color:rgb(255, 255, 255)">Anti-tax: </span>The most popular anti snipe measure, early buyers pay a penalty fee for using algorithms to get in early into tokens. 
+                                            The said penalty is often set as high as 90% leading to a total loss of funds for the user. 
+                                            We at Blockinetics stand strictly against such immoral practices and provide you with tools to circumvent the infamous sniper tax.
+                                            </p>
+                                            <p>
+                                                <span style="color:rgb(255, 255, 255)">Blacklist protection: </span>Another common anti snipe measure is the blacklist or the increased sell tax, even though technically 
+                                            different from one another, our blacklist sanity checks, guard you against both. 
+                                            A buyer which is added to the blacklist will not be able to sell the Token, and one that is caught in a sell tax will loose all his funds if he/she sells too early. 
+                                            Our siping algorithm reverts your transaction once it detects the danger to get caught up in it, and gets you into the token as soon as this immoral measure is lifted.
+                                            </p>
+                                            <p>
+                                                <span style="color:rgb(255, 255, 255)">Mempool: </span> We get it the Memory pool is a buzzword in crypto, often also referred to as the "dark forest" of Blockchains, the Memory Pool, Mempool or Txpool is a 
+                                            place where transactions are gathered before they are executed on the Blockchain. Here front running bots go on the hunt for incautious buyers to take advantage 
+                                            of too highly set slippage, and this is the place where our Sniper Bot identifies the Transaction that will open trading on a newly released coin. The Mempool is 
+                                            basically the Orderbook of a Dex and knowing what to look for you can achieve great speed gains when it comes to low latency trading. We are constantly adapting 
+                                            and speed optimizing our analytics to provide our users with the most competitive algorithm possible.
+                                            </p>
+                                            <p>
+                                                <span style="color:rgb(255, 255, 255)">Alphalytics: </span> This is an added to feature to the current alphalytics UI, you're provided with further dashboard focused on analytics, 
+                                            such as screening network usage, and chart indicators / general market maker insights. 
+                                                </p>
+                                        </p>
+                                    </dd>
+                                   
                                     <dt class="wave wow fadeInUp" data-wow-delay="0.5s">How do you install it? Any requirements?
                                     </dt>
                                     <dd>
-                                        <p>Unlike many other sniper bots out there, we have provided Alphalytics to take away the manual setup 
+                                        <p> <span style="color:rgb(255, 255, 255)">Installation: </span>Unlike many other sniper bots out there, we have provided Alphalytics to take away the manual setup 
                                             and configuration which slows users down significantly, providing you with a simple to use interface 
                                             accessed through our web application. Through our backend users have access to a node which allows you 
                                             to query the mempool without setting up your own server. 
+                                        </p>
+                                        <p>
+                                            <span style="color:rgb(255, 255, 255)">Advantage: </span>When it comes to other trading algorithms on the market the user is often forced to trust 
+                                            the provider a great deal by downloading potentially malicious apps or entering sensitive credentials such as ones private key. 
+                                            We at Blockinetics want to provide you with the best possible user experience and therefore we do not want you to worry about mentioned issues. 
+                                            To use the Blockinetics sniper algorithm you can use metamask, which is just the same as using trading through the user Interface of popular dexes 
+                                            such as Pancakeswap or uniswap. 
+                                            To not let user experience come at the expense of speed, we have our own private keys in the backend which we update on a daily basis and which execute and pay 
+                                            for your transactions. Depending on which tier you choose you get a varying amount of free transactions per subscription period which you can use. 
+                                            After that you will need to pay.
                                         </p>
                                     </dd>
                                     <dt class="wave wow fadeInUp" data-wow-delay="0.3s">Does it need a crypto wallet? 
                                     </dt>
                                     <dd>
                                         <p>Corect, a Metamask wallet is needed so you can exchange tokens and send them elsewhere. You can 
-                                            connect to your metamask in order to access our sniping UI after subscription. 
+                                            connect to your metamask in order to access our sniping UI during subscription or by clicking "connect wallet" in the navigation bar. 
                                         </p>
                                     </dd>
                                     <!-- Single FAQ Area -->
@@ -695,8 +766,7 @@
 
                                 </div>
                                 <h2 class="contact-title fadeInUp" data-wow-delay="0.3s">Contact Us</h2>
-                                <p class="wow fadeInUp" data-wow-delay="0.4s">Send us an email regarding any queries, we
-                                    look to respond within 1-2 days.</p>
+                                <p class="wow fadeInUp" data-wow-delay="0.4s">Send us an email regarding any queries you may have.</p>
                             </div>
                         </div>
                     </div>

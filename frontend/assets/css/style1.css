@@ -25,7 +25,6 @@
 - Contact us style 
 - FAQ style -Timeline style 
 - Footer area style 
-
 ***/
 
 /*** 
@@ -134,14 +133,16 @@ ol {
     border-radius: 15px;
     background: linear-gradient(to right, #000000 0%, #000000 100%);
     border: 2px solid #242424;;
-    height: 590px;
-    margin:20px
+    height: 618px;
+    margin:20px;
+    border:flex;
 }
 
 
 .card-body{
     background: linear-gradient(to right, #000000 0%, #140827 100%);
     border-radius: 15px;
+    border:flex;
 }
 
 .card-title4{
@@ -157,12 +158,10 @@ ol {
     text-align: center
 }
 
-
-
 .hero-content {
     width: 100%;
-    margin-top: 280px;
-    background: rgba(72, 52, 212, 0.95);
+    margin-top: 330px;
+    background: rgba(0, 0, 0, 0.95);
     background: -webkit-linear-gradient(to right, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
     background: -webkit-linear-gradient(left, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
     background: linear-gradient(to right, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
@@ -176,6 +175,12 @@ ol {
     font-family: 'Poppins', sans-serif;
     font-size:14px;
     margin-left:13px;
+}
+.answer{
+    font-family: 'Poppins', sans-serif;
+    font-size:14px;
+    margin-left:13px;
+    color:#7c7c7c
 }
 
 .pricing-title{
@@ -311,6 +316,9 @@ p {
 .about-image{
     width: 470px;
     margin-bottom: 10px;
+   
+    display:flex;
+    border:flex;
 }
 
 .ask-image{
@@ -319,9 +327,7 @@ p {
 }
  
 .sniper-image {
-    margin-left: 13px;
     margin-top: 50px;
-    
     width: 650px;
     display:flex;
     border:flex;
@@ -360,6 +366,93 @@ ol {
     line-height: 1;
 
 }
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #050505;
+	z-index: 800;
+	height: 100%;
+	width: 100%;
+}
+.no-js #preloader, .oldie #preloader {
+	display: none;
+}
+#loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	padding: 0;
+}
+
+
+
+/*cubes*/
+.sk-cube-grid {
+  width: 60px;
+  height: 60px;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: rgb(255, 255, 255);
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
 .has-print{
     position: absolute;
     top: -50px;
@@ -376,10 +469,8 @@ ol {
     z-index: 99999;
     top: 0;
     left: 0;
-    background: #4834d4;
-    background: -webkit-linear-gradient(to right, #4834d4, #341f97);
-    background: -webkit-linear-gradient(left, #4834d4, #341f97);
-    background: linear-gradient(to right, #4834d4, #341f97);
+    background: #000000;
+    background: linear-gradient(to right, #000000, #000000);
 }
 
 .preload-content {
