@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+	<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+	<script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+	<link rel="stylesheet" href="./../../assets/css/main.css">
+
+	<link rel="stylesheet" href="./../../assets/css/style.css">
+</head>
+
+<body onload="getUser()">
+	<nav class="navbar navbar-expand ">
+		<a class="navbar-brand navbar-default navbar-fixed-top" href="./sniperT2.html"> <img
+				src="./../../assets/images/logo.png" class="d-inline-block align-top"></a>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="./sniperT3.html">Sniper V1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./sellT3.html">Sell</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./transferT3.html">Transfer</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./addT3.html">Add</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./../index.html">Blockinetics</a>
+			</li>
+		</ul>
+		</div>
+
+		<button id="connectButton" class="bt_connect">Connect Wallet</button>
+
+		</div>
+	</nav>
+	<div class="title1">
+		<p>
+			Sniper V1
+		</p>
+	</div>
+	<div class="container-sniper">
+		<div class="form-group">
+			<div class="container-sniper">
+				<div class="bt_credentials">
+				</div>
+			</div>
+		</div>
+		<div class="container-sniper"></div>
+		<div class="col-sm-12">
+			<div class="card">
+				<div class="card-header">
+					<div class="float-left">Account</div>
+				</div>
+				<div class="card-body">
+					<div class="balance">balance: 0 ETH </div>
+					<div class="exchange-buttons-container">
+						<a class="bt_g" href="./add.html" style="text-decoration: none;" id="notifyBtn">Create
+							Wallet</a>
+						<a class="bt_g" href="./withdrawr.html" style="text-decoration: none;"
+							id="notifyBtn">Withdraw</a>
+						<a class="bt_g" href="./transfer.html" style="text-decoration: none;"
+							id="notifyBtn">Transfer</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<br>
+	<div class="container-sniper">
+		<div class="">
+			<div class="form-group">
+				<div class="col-sm-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="float-left">Your Configuration</div>
+						</div>
+						<div class="card-body" style="display: block;">
+							<div class="df pdlr10">
+								<div class="left_1">
+									<div class="profile">
+										<span id="wbnb" class="text_gray">WETH</span>
+										<span class="slash">/</span>
+										<span id="target" class="text_white">TEST</span>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+									</div>
+									<div class="info df">
+										<span class="small_white"></span>
+										<span id="addressA" class="small_gray">Token: 0x8b3...f73f</span>
+										<i class="fa fa-files-o" aria-hidden="true"></i>
+										<span id="addressB" class="small_gray">Token: 0x8b3...f73f</span>
+										<i class="fa fa-files-o" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="right_1 df">
+									<h1></h1>
+									<span class="text-red"></span>
+									<div class="eth">
+									</div>
+								</div>
+								<div id="chart"></div>
+								<button id="chartBtn" class="bt_v"><i aria-hidden="true"></i> Toggle Chart</button>
+								<a class="bt_v" href="./add.html" style="text-decoration: none;"
+									id="notifyBtn">Configure</a>
+							</div>
+							<div class="df bg_gr">
+								<header class="df jss">
+									<div>
+										<span class="t_v"> Console </span>
+									</div>
+									<div>
+										<button class="bt_v"> View on Etherscan</button>
+									</div>
+								</header>
+								<div class="box df jss">
+									<div>
+										<span id="console" class="t_g">
+										</span>
+										<span id="emode" class="t_g">
+									</div>
+									<div>
+										<span>
+										</span>
+										<span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="df ">
+								<button id="emodeBtn" class="bt_3">EMODE</button>
+								<button id="fastBuy" class="bt_3">FAST BUY</button>
+								<button id="sellwinBtn" class="bt_4">SELL</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright1">
+			<p>
+				© 2022 Blockinetics. All Rights Reserved.
+
+			</p>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="./js/sniper.js"></script>
+</body>
+
+</html>
