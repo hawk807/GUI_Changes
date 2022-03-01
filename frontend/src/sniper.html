@@ -12,13 +12,13 @@
 	<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 	<script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/blockinetics_style.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body onload="getUser()">
-	<nav class="navbar navbar-expand ">
-		<a class="navbar-brand navbar-default navbar-fixed-top" href="./sniper.html"> <img
-				src="./../assets/images/core-img/logo.png" class="d-inline-block align-top"></a>
+	<nav class="navbar navbar-expand">
+		<div class="navbar-brand navbar-default navbar-fixed-top" href="./sniper.html"> <img
+				src="./../static/images/logo.png" class="d-inline-block align-top"></div>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
 				<a class="nav-link" href="./sniper.html">Sniper V1</a>
@@ -44,7 +44,6 @@
 	</nav>
 	<div class="title1">
 		<p>
-			Sniper V1
 		</p>
 	</div>
 	<div class="container-sniper">
@@ -58,7 +57,7 @@
 		<div class="col-sm-12">
 			<div class="card">
 				<div class="card-header">
-					<div id='Account' class="float-left">Wallet: 0x0000000000000000000000000000000000000000</div>
+					<div id='Account' class="float-left">Wallet: 0x0000000000000000000000000000000000000001</div>
 				</div>
 				<div class="card-body">
 					<div class="balance">Balance: 0 BNB </div>
@@ -71,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+	</div>
 	<br>
 	<div class="container-sniper">
 		<div class="">
@@ -97,25 +96,33 @@
 										<span id="addressB" class="small_gray">Token: 0x8b3...f73f</span>
 										<i class="fa fa-files-o" aria-hidden="true"></i>
 
-										<div class="custom-select" style="width:100px;" >
+										<div class="custom-select" style="width:100px;">
 											<select>
-											  <option value="0">30M</option>
-											  <option value="1">1M</option>
-											  <option value="1">5M</option>
-											  <option value="2">15M</option>
-											  <option value="3">30M</option>
-											  <option value="4">45M</option>
-											  <option value="5">1H</option>
-											  <option value="6">2H</option>
-											  <option value="7">4H</option>
-											  <option value="8">1D</option>
-											  <option value="9">1M</option>
-											  <option value="10">1Y</option>
+												<option value="0">30M</option>
+												<option value="1">1M</option>
+												<option value="1">5M</option>
+												<option value="2">15M</option>
+												<option value="3">30M</option>
+												<option value="4">45M</option>
+												<option value="5">1H</option>
+												<option value="6">2H</option>
+												<option value="7">4H</option>
+												<option value="8">1D</option>
+												<option value="9">1M</option>
+												<option value="10">1Y</option>
 											</select>
-										  </div>
 
-										</div>
+
+
+										</div class="usage">memepool</b>
+										<label class="switch">
+											<input type="checkbox">
+											<span class="slider round"></span>
+										</label>
 									</div>
+								</div>
+
+
 
 
 								<div class="right_1 df">
@@ -130,29 +137,18 @@
 								<button id="chartBtn" class="bt_g"><i aria-hidden="true"></i> Toggle Chart</button>
 								<button class="bt_g" id="notifyBtn">Configure</button>
 							</div>
-							<div class="df bg_gr">
-								<header class="df jss">
-									<div>
-										<span class="t_v"> Console </span>
-									</div>
-									<div>
-										<button class="bt_v"> View on Etherscan</button>
-									</div>
-								</header>
-								<div class="box df jss">
-									<div>
-										<span id="console" class="t_g">
-										</span>
-										<span id="emode" class="t_g">
-									</div>
-									<div>
-										<span>
-										</span>
-										<span>
-										</span>
-									</div>
+							<div class="row5">
+								<div class="column5">
+									<div class="card5">tx logs</div>
+								</div>
+								<div class="column5">
+									<div class="card5">gas station</div>
+
 								</div>
 							</div>
+
+
+
 							<div class="df ">
 								<button id="MempoolModeBtn" class="bt_3">memode</button>
 								<button id="LiquidityBtn" class="bt_3">emode</button>
@@ -167,7 +163,6 @@
 		<div class="copyright1">
 			<p>
 				© 2022 Blockinetics. All Rights Reserved.
-
 			</p>
 		</div>
 	</div>
