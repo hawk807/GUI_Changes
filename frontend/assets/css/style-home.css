@@ -491,19 +491,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .tc-dark, .tc-dark a { color: #223b55 !important; }
 
-.tc-theme, .tc-theme a { color: #fe4350 !important; }
-
-.tc-theme-alt, .tc-theme-alt a { color: #fe4350 !important; }
-
 .tc-white { color: #fff !important; }
-
-.bg-default { background-color: #415076 !important; }
-
-.bg-alternet { background-color: #fe4350 !important; }
-
-.bg-primary { background-color: #fe4350 !important; }
-
-.bg-secondary { background-color: #ff6c3f !important; }
 
 .bg-light { background-color: #f6fafd !important; }
 
@@ -549,7 +537,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .bg-success { background-color: #39d884 !important; }
 
-.bg-danger { background-color: #e6604a !important; }
+.bg-danger { background-color: #000000 !important; }
 
 .bg-black { background-color: #000; }
 
@@ -565,7 +553,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .bg-black-22 { background-color: rgba(0, 0, 0, 0.22); }
 
-.bg-white { background-color: #fff; }
+.bg-white { background-color: rgb(0, 0, 0); }
 
 .bg-white-2 { background-color: rgba(255, 255, 255, 0.02); }
 
@@ -605,7 +593,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .bg-theme-dark-alt.current { background-color: rgba(73, 25, 29, 0.7) !important; }
 
-.bg-theme-light { background-color: #f6fafd !important; }
+.bg-theme-light { background-color: #000000 !important; }
 
 .bg-theme-light.current { background-color: rgba(246, 250, 253, 0.7) !important; }
 

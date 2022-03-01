@@ -5,3 +5,69 @@ Version	 :	1.9.5
 Updated	 :	04.02.2022
 */
 /*! WRITE YOUR CUSTOM STYLE **/
+
+.bg-default { background-color: #000000 !important; }
+
+.bg-alternet { background-color: #000000 !important; }
+
+.bg-primary { background-color: #c343fe !important; }
+
+.bg-secondary { background-color: #3d0050 !important; }
+
+.tc-theme, .tc-theme a { color: #550055 !important; }
+
+.tc-theme-alt, .tc-theme-alt a { color: #2d0d57 !important; }
+
+.bg-grad { background-image: linear-gradient(90deg, #000000 0%, #000000 100%) !important; }
+
+.bg-grad-alt { background-image: linear-gradient(90deg, #000000 0%, #000000 100%) !important; }
+
+.bg-grad-special { background-image: linear-gradient(140deg, #fed895 0%, #fed895 20%, transparent 50%, transparent 100%) !important; }
+
+.bg-grad-special-alt { background-image: linear-gradient(to top, #000000 0%, #000000 5%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%); }
+
+.bg-grad-vr-theme-to-alt { background-image: linear-gradient(to bottom, #000000 0%, #000000 100%) !important; }
+
+.bg-grad-vr-theme-dark-to-dark-alt { background-image: linear-gradient(to bottom, #36080b 0%, #49191d 100%) !important; }
+
+.bg-grad-vr-alt-to-theme { background-image: linear-gradient(to top, #000000 0%, #000000 100%) !important; }
+
+.bg-grad-vr-dark-alt-to-theme-dark-to-theme { background-image: linear-gradient(to top, #36080b 0%, #49191d 100%) !important; }
+
+.bg-theme { background-color: #000000 !important; }
+
+.bg-theme-grad-alt { background-image: linear-gradient(to right, #000000 0%, #2c0050 150%) !important; }
+
+.dream-btn {
+    border: 1.5px solid #ffffff;
+    border-radius: 1.5px;
+    position: relative;
+    z-index: 1;
+    min-width: 160px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    background-size: 200% auto;
+    color: #fff;
+    border-radius: 100px;
+    background-image: #50cdfe;
+    -webkit-transition: all 500ms;
+    transition: all 200ms;
+    margin-top:7px
+}
+
+.dream-btn:hover {
+    color: #fff;
+    background: #7450fe;
+    border-color: #7450fe;
+}
+
+.header-logo{
+    margin-bottom: 10px;
+    
+}
