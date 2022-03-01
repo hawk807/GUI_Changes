@@ -36,7 +36,7 @@ Updated	 :	04.02.2022
 
 .bg-theme { background-color: #000000 !important; }
 
-.bg-theme-grad-alt { background-image: linear-gradient(to right, #000000 0%, #23003f 170%) !important; }
+.bg-theme-grad-alt { background-image: linear-gradient(to right, #000000 0%, #150031 170%) !important; }
 
 .dream-btn {
     border: 1.5px solid #ffffff;
@@ -140,3 +140,9 @@ Updated	 :	04.02.2022
     white-space: nowrap; 
     cursor: pointer; }
 
+
+
+.header-logo{
+    margin-bottom: 10px;
+    
+}
