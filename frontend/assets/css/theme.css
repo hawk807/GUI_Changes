@@ -36,7 +36,7 @@ Updated	 :	04.02.2022
 
 .bg-theme { background-color: #000000 !important; }
 
-.bg-theme-grad-alt { background-image: linear-gradient(to right, #000000 0%, #2c0050 150%) !important; }
+.bg-theme-grad-alt { background-image: linear-gradient(to right, #000000 0%, #23003f 170%) !important; }
 
 .dream-btn {
     border: 1.5px solid #ffffff;
@@ -58,7 +58,8 @@ Updated	 :	04.02.2022
     background-image: #50cdfe;
     -webkit-transition: all 500ms;
     transition: all 200ms;
-    margin-top:7px
+    margin-top:7px;
+    cursor: pointer;
 }
 
 .dream-btn:hover {
@@ -71,3 +72,71 @@ Updated	 :	04.02.2022
     margin-bottom: 10px;
     
 }
+
+.btn-outline:not(:hover), .btn-outline:not(:focus) { color: #7450fe; background-color: transparent !important; }
+
+.btn-outline.on-bg-theme:before { background-color: #7450fe;}
+
+.btn-outline.on-bg-theme-dark:before { background-color: #36080b; }
+
+.btn-outline.on-bg-theme-dark-alt:before { background-color: #49191d; }
+
+.btn-outline:hover, .btn-outline:focus { color: #fff !important; }
+
+.btn-outline:hover:before, .btn-outline:focus:before { opacity: 0; }
+
+.btn-outline.btn-grad { border: none; }
+
+.btn-outline.btn-grad:hover, .btn-outline.btn-grad:focus { color: #fff !important; }
+
+.btn-icon { min-width: 44px; padding-left: 6px; padding-right: 6px; }
+
+.btn-primary { background-color: #7450fe; border-color: #7450fe; }
+
+.btn-primary:hover:focus, .btn-primary:focus:focus { color: #fff !important; }
+
+.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus { background-color: #7450fe !important; border-color: #7450fe;; color: #fff !important; }
+
+.login-btn {
+    
+    z-index: 1;
+    color: #fff;
+    font-size: 12px !important;
+    line-height: 60px;
+    padding: 0 20px;
+    min-width: 100px;
+    height:50px;
+    border-radius: 15px;
+    border: 2px solid;
+    letter-spacing: 1px;
+    border-color: #7450fe;
+    cursor: pointer;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    color: #fff;
+    background: #7450fe;
+    border-color: #7450fe;
+}
+.btn { position: relative; 
+    font-size: 12px; 
+    line-height: 24px; 
+    font-weight: 500; 
+    padding: 8px 15px; 
+    text-align: center; 
+    text-transform: uppercase; 
+    color: #fff; min-width: 
+    120px; max-width: 100%; 
+    border: 2px solid #7450fe; 
+    box-sizing: border-box; 
+    transition: all 0.5s; 
+    position: relative; 
+    border-radius: 10px; 
+    z-index: 2; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    white-space: nowrap; 
+    cursor: pointer; }
+
