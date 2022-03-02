@@ -12,8 +12,6 @@ Updated	 :	04.02.2022
 
 .bg-primary { background-color: #c343fe !important; }
 
-.bg-secondary { background-color: #3d0050 !important; }
-
 .tc-theme, .tc-theme a { color: #550055 !important; }
 
 .tc-theme-alt, .tc-theme-alt a { color: #2d0d57 !important; }
@@ -98,7 +96,6 @@ Updated	 :	04.02.2022
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus { background-color: #7450fe !important; border-color: #7450fe;; color: #fff !important; }
 
 .login-btn {
-    
     z-index: 1;
     color: #fff;
     font-size: 12px !important;
@@ -119,28 +116,6 @@ Updated	 :	04.02.2022
     background: #7450fe;
     border-color: #7450fe;
 }
-.btn { position: relative; 
-    font-size: 12px; 
-    line-height: 24px; 
-    font-weight: 500; 
-    padding: 8px 15px; 
-    text-align: center; 
-    text-transform: uppercase; 
-    color: #fff; min-width: 
-    120px; max-width: 100%; 
-    border: 2px solid #7450fe; 
-    box-sizing: border-box; 
-    transition: all 0.5s; 
-    position: relative; 
-    border-radius: 10px; 
-    z-index: 2; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    white-space: nowrap; 
-    cursor: pointer; }
-
-
 
 .header-logo{
     margin-bottom: 10px;

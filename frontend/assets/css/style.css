@@ -55,6 +55,7 @@ body{
 	color: white
 }
 
+
 .gui-logo{
     width: 350px;
     height: 350px;
@@ -631,8 +632,7 @@ margin-top: 50px;
 
 .timeframe-btn:hover{
 	background-image: linear-gradient(to right, #0e0824 0%,#0e0824 70%);
-	color: white
-	
+	color: white;
 }
 
 header{
