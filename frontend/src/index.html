@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="./../assets/images/favicon.png">
+    <link rel="shortcut icon" href="./../assets/images/core-img/favicon.ico">
     <!-- Site Title  --> 
     <title>Blockinetics</title>
     <!-- Bundle and Base CSS -->
@@ -16,9 +16,54 @@
     <!-- Extra CSS -->
     <link rel="stylesheet" href="./../assets/css/theme.css?ver=195">
     <link rel="stylesheet" href="./../assets/css/style1.css?ver=1">
+
+    <style>
+        body {
+            position: absolute;
+        }
+    </style>
+
 </head>
 
-<body class="nk-body body-wider mode-onepage">
+<body>
+    <div id="preloader"> 
+
+    	<div id="loader">	   
+    	<div class="sk-cube-grid">
+  <div class="sk-cube sk-cube1"></div>
+  <div class="sk-cube sk-cube2"></div>
+  <div class="sk-cube sk-cube3"></div>
+  <div class="sk-cube sk-cube4"></div>
+  <div class="sk-cube sk-cube5"></div>
+  <div class="sk-cube sk-cube6"></div>
+  <div class="sk-cube sk-cube7"></div>
+  <div class="sk-cube sk-cube8"></div>
+  <div class="sk-cube sk-cube9"></div>
+</div>
+</div>
+</div> 
+   
+
+<!-- jQuery Plugin -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+    //<![CDATA[
+    function showSite(){
+          $('#loader').fadeOut(); // will first fade out the loading animation 
+          $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+          $('body').delay(350).css({'overflow':'visible'});
+    }
+        $(window).on('load', function() { // makes sure the whole site is loaded 
+        setTimeout(function(){ showSite() }, 2000);
+        })
+    //]]>
+</script>
+
+
+
+<header class="nk-body body-wider mode-onepage">
     <div class="nk-wrap">
         <header class="nk-header page-header is-transparent is-sticky is-shrink" id="header">
             <!-- Header @s -->
