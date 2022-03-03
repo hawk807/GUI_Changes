@@ -30,8 +30,14 @@
 	
 }
 
+.nav-link:focus{
+	border: transparent;
+	color:white;
+}
+
 .nav-link:hover{
-	color: #ffffff;
+	border: transparent;
+	color:white;
 }
 
 .navbar{
@@ -204,6 +210,11 @@ margin-top: 50px;
     font-size: 1.25rem;
     line-height: inherit;
 	white-space: nowrap;
+}
+
+.navbar-brand:focus{
+	outline: 1.5px transparent !important;
+	border: 1.5px solid transparent;
 }
 
 .bt_g{

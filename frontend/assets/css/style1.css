@@ -978,16 +978,52 @@ ol {
 .login-btn {
     position: relative;
     z-index: 1;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 12px !important;
     line-height: 33px;
-    padding: 0 20px;
+    padding: 0 10px;
     min-width: 100px;
     height: 35px;
     border-radius: 50px;
     border: 2px solid;
     letter-spacing: 1px;
     border-color: #7450fe;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    color: #fff;
+    background: #7450fe;
+    border-color: #7450fe;
+}
+
+.discord-btn {
+    position: relative;
+    z-index: 1;
+    font-family: 'Black Han Sans', sans-serif;
+    color: #ffffff;
+    
+    font-size: 12px !important;
+    line-height: 33px;
+    padding: 0 10px;
+    min-width: 100px;
+    font-weight: bold;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid;
+    letter-spacing: 1px;
+    border-color: #5864f3;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.discord-btn:hover,
+.discord-btn:focus {
+    color: #fff;
+    background: #646fe0;
+    border-color: #646fe0;
 }
 
 .tooltip {
@@ -1021,13 +1057,6 @@ ol {
   .tooltip:hover:before {
     display:block;
   }
-
-.login-btn:hover,
-.login-btn:focus {
-    color: #fff;
-    background: #7450fe;
-    border-color: #7450fe;
-}
 
 .img-responsive{
     width: 1100px;

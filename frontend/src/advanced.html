@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-    <link rel="stylesheet" href="./../../assets//css/main.css">
-    <link rel="stylesheet" href="./../../assets//css/add.css">
-    <link rel="stylesheet" href="./../../assets//css/style.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/add.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         .input-group>input {
             border-radius: 0px 20px 20px 0px !important
@@ -26,27 +26,26 @@
 
 <body onload="getUser()">
     <nav class="navbar navbar-expand ">
-		<a class="navbar-brand navbar-default navbar-fixed-top" href="./index.html"> <img src="./../../static/images/logo.png"
-				class="d-inline-block align-top"></a>
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="./sniperT1.html">Trade</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./sellT1.html">Sell</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./transferT1.html">Transfer</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./addT1.html">Add</a>
-			</li>
-			
+        <a class="navbar-brand navbar-default navbar-fixed-top" href="./index.html"> <img
+                src="./../static/images/logo.png" class="d-inline-block align-top"></a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./sniper.html">Trade</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./sell.html">Sell</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./transfer.html">Transfer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./add.html">Add</a>
+            </li>
         </ul>
+        </div>
         <button id="connectButton" class="bt_connect">Connect Wallet</button>
+        </div>
 
-    </div>
-		</div>
     </nav>
     <div class="title1">
         <p>
@@ -106,15 +105,24 @@
                                 <div class="col-md-12">&nbsp</div>
                                 <div class="col-md-12">
                                     <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Blacklist-Check</span>
+                                        </div>
+                                        <select class="custom-select" onchange="val()" id="select_id">
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-12">&nbsp</div>
                                 <div class="col-md-12">
-                                    <div class="input-group">
-                                        <button class="bt_v" id="updateBtn">Update</button>
+                                    <div class="col-md-12">&nbsp</div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <button class="bt_v" id="updateBtn">Update</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         </form>
                     </div>
                 </div>
