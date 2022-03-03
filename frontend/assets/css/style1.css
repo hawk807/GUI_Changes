@@ -1,4 +1,4 @@
-/*** 
+/***
 ====================================================================
   Table of contents
 ====================================================================
@@ -7,27 +7,27 @@
 - Css Imports
 - General Css Styles
 - Header Area style
-- Welcome Area Styles 
+- Welcome Area Styles
 - Partners area style
-- About us area style 
-- services-block-four style 
-- Demo-video area style 
-- Trust area style 
-- services area style 
+- About us area style
+- services-block-four style
+- Demo-video area style
+- Trust area style
+- services area style
 - Call-to-action area style
-- Video area style 
-- Gallery area style 
-- Cool-facts style 
+- Video area style
+- Gallery area style
+- Cool-facts style
 - Price table style
-- Testimonials area style 
+- Testimonials area style
 - Team area style
-- Blog area style 
-- Contact us style 
-- FAQ style -Timeline style 
-- Footer area style 
+- Blog area style
+- Contact us style
+- FAQ style -Timeline style
+- Footer area style
 ***/
 
-/*** 
+/***
 
 ====================================================================
   Google fonts
@@ -38,7 +38,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
 
-/*** 
+/***
 
 ====================================================================
   Import All Css
@@ -46,7 +46,7 @@
 
 ***/
 
-@import 'bootstrap.min.css';
+/* @import 'bootstrap.min.css';
 @import 'animate.css';
 @import 'classy-nav.min.css';
 @import 'dzsparallaxer.css';
@@ -54,9 +54,9 @@
 @import 'magnific-popup.css';
 @import 'animated-headline.css';
 @import 'font-awesome.min.css';
-@import 'themify-icons.css';
+@import 'themify-icons.css'; */
 
-/*** 
+/***
 
 ====================================================================
   General css style
@@ -75,47 +75,47 @@
 
 }
 
-.btn { position: relative; 
-    font-size: 12px; 
-    line-height: 24px; 
-    font-weight: 500; 
-    padding: 8px 15px; 
-    text-align: center; 
-    text-transform: uppercase; 
-    color: #fff; min-width: 
-    120px; max-width: 100%; 
-    border: 2px solid #7450fe; 
-    box-sizing: border-box; 
-    transition: all 0.5s; 
-    position: relative; 
-    border-radius: 10px; 
-    z-index: 2; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    white-space: nowrap; 
+.btn { position: relative;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 8px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff; min-width:
+    120px; max-width: 100%;
+    border: 2px solid #7450fe;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    position: relative;
+    border-radius: 10px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
     cursor: pointer; }
 
-.btn-tiers { position: relative; 
-    font-size: 12px; 
-    line-height: 24px; 
-    font-weight: 500; 
-    padding: 8px 15px; 
-    text-align: center;  
-    color: #fff; min-width: 
-    120px; max-width: 100%; 
+.btn-tiers { position: relative;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 8px 15px;
+    text-align: center;
+    color: #fff; min-width:
+    120px; max-width: 100%;
     background-color:#7350fe00;
-    border: 2px solid #7450fe; 
-    box-sizing: border-box; 
+    border: 2px solid #7450fe;
+    box-sizing: border-box;
     text-transform: uppercase;
-    transition: all 0.5s; 
-    position: relative; 
-    border-radius: 10px; 
-    z-index: 2; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    white-space: nowrap; 
+    transition: all 0.5s;
+    position: relative;
+    border-radius: 10px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
     cursor: pointer; }
 
 .btn-tiers:hover, .btn-tiers:focus { background-color: #7450fe !important; border-color: #7450fe;; color: #fff !important; }
@@ -146,7 +146,7 @@
 ol {
     list-style: none; /* Remove default bullets */
   }
-  
+
   ol li::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: rgb(255, 255, 255); /* Change the color */
@@ -158,8 +158,8 @@ ol {
 
   .col-13 {
     position: center;
-    color: white; 
-   
+    color: white;
+
 }
 
 .step{
@@ -179,7 +179,7 @@ ol {
     border: 1.2px solid;
 	border-color:rgb(49, 49, 49);
  }
- 
+
 .card-body{
     border-radius: 15px;
     border:flex;
@@ -235,7 +235,7 @@ ol {
     font-style: bold;
     margin-bottom:15px;
 }
-    
+
 .tier-title{
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
@@ -339,16 +339,16 @@ li {
 .about-image{
     width: 470px;
     margin-bottom: 10px;
-   
+
     display:flex;
     border:flex;
 }
 
 .ask-image{
     width: 400px;
-   
+
 }
- 
+
 .sniper-image {
     margin-top: 50px;
     width: 650px;
@@ -427,7 +427,7 @@ ol {
   background-color: rgb(255, 255, 255);
   float: left;
   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
 }
 .sk-cube-grid .sk-cube1 {
   -webkit-animation-delay: 0.2s;
@@ -463,7 +463,7 @@ ol {
             transform: scale3D(1, 1, 1);
   } 35% {
     -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1); 
+            transform: scale3D(0, 0, 1);
   }
 }
 
@@ -474,7 +474,7 @@ ol {
   } 35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1);
-  } 
+  }
 }
 .has-print{
     position: absolute;
@@ -846,7 +846,7 @@ ol {
     height: 20px;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
-   
+
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
@@ -970,15 +970,15 @@ ol {
   .tooltip:before {
     content: attr(data-text); /* here's the magic */
     position:absolute;
-    
+
     /* vertically center */
     top:50%;
     transform:translateY(-50%);
-    
+
     /* move to right */
     left:100%;
     margin-left:15px; /* and add a small left margin */
-    
+
     /* basic styles */
     width:200px;
     padding:10px;
@@ -986,7 +986,7 @@ ol {
     background:#000;
     color: #fff;
     text-align:center;
-  
+
     display:none; /* hide by default */
   }
 
@@ -1002,7 +1002,7 @@ ol {
 }
 
 .img-responsive{
-    width: 1100px; 
+    width: 1100px;
 }
 
 
@@ -1026,7 +1026,7 @@ ol {
     background: -webkit-linear-gradient(to right, #000000, #000000);
     background: -webkit-linear-gradient(left, #000000, #000000);
     background: linear-gradient(to right, #000000, #000000);
-   
+
     border-bottom: none;
 }
 
@@ -1213,7 +1213,7 @@ ol {
     .welcome-small-wrapper{
        display: none;
     }
-    
+
 }
 .main-ilustration-2:before{
     content: '';
@@ -1279,7 +1279,7 @@ ol {
     font-size: 18px;
     color: #fff;
     margin-bottom: 30px;
-} 
+}
 
 p.artficial{
     padding-left: 20px;
@@ -1498,7 +1498,7 @@ p.artficial:before{
 .welcome-meter {
     position: relative;
     z-index: 1;
-  
+
 }
 .welcome-meter.arficial{
     position: relative;
@@ -1522,7 +1522,7 @@ p.artficial:before{
 .growing-company p .counter {
     color: #fff;
 }
-/*** 
+/***
 
 ====================================================================
   services-block-four style
@@ -1618,7 +1618,7 @@ p.artficial:before{
   border-radius: 50%;
   transform: scale(0);
   transition: .7s ease;
-  
+
 }
 .services-block-four .inner-box:hover .icon-box:after {
   transform: scale(1);
@@ -1697,7 +1697,7 @@ p.artficial:before{
 }
 
 .services-block-four .inner-box h3 a:hover{
-  
+
 }
 
 .services-block-four .inner-box .text{
@@ -2038,7 +2038,7 @@ p.artficial:before{
     text-align: center
 }
 
-/* bullets */ 
+/* bullets */
 #section_5-slider-circle .data_cir-content p {
     font-size: 13px;
     color: #7451FE;
@@ -4047,7 +4047,7 @@ body.light-version {
 .demo-item {
     -webkit-box-shadow: 0 2px 28px rgba(0,0,0,.1);
     box-shadow: 0 2px 28px rgba(0,0,0,.1);
-    transition: all .3s ease-in;   
+    transition: all .3s ease-in;
     overflow: hidden;
     background: #fff;
     margin-bottom: 30px
