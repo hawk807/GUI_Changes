@@ -226,7 +226,9 @@ ol {
 .pricing-title{
     font-size:80px
 }
-
+.main_logo{
+    width: 70%;
+}
 .tier-package{
     margin-top: 50px;
     font-size: 25px;
@@ -1004,7 +1006,7 @@ ol {
     z-index: 1;
     font-family: 'Black Han Sans', sans-serif;
     color: #ffffff;
-    
+
     font-size: 12px !important;
     line-height: 33px;
     padding: 0 10px;
