@@ -6129,7 +6129,7 @@ padding-bottom:20p; }
 
 .logo-light, .is-transparent:not(.has-fixed) .logo-dark, .is-dark .logo-dark { display: none; }
 
-.logo img { height: 36px; transition: all .4s; }
+.logo img { transition: all .4s; }
 
 .logo-md img { height: 44px; }
 
@@ -6141,7 +6141,6 @@ padding-bottom:20p; }
   .header-container:not(.container) { padding: 0 25px; }
   .header-container-s1:not(.container) { padding: 0 25px; }
   .header-banner { min-height: 98px; }
-  .logo img { height: 40px; }
   .logo-md img { height: 50px; }
   .logo-lg img { height: 60px; } }
 
@@ -6343,7 +6342,7 @@ padding-bottom:20p; }
   .secondary-navbar { padding: 0; display: block; }
   .secondary-menu-link { padding: 20px 38px; } }
 
-@media (min-width: 992px) and (max-width: 1199px) { .logo img { height: 32px; }
+@media (min-width: 992px) and (max-width: 1199px) {
   .header-navbar-s1 .menu > .menu-item > a { padding: 20px 6px; font-size: 12px; font-weight: 500; }
   .menu-btns > li { padding: 6px; }
   .menu-btns .btn { font-size: 13px; line-height: 20px; padding: 10px 15px; min-width: 0; }
